@@ -1,0 +1,170 @@
+<template>
+    <lightning-record-edit-form
+        record-id={supervisorId}
+        object-api-name='TestForest__c'
+        onsubmit={handleSubmit}
+        onload={handleLoad}
+        onsuccess={handleSuccess}
+        onerror={handleError}
+        >
+        <lightning-messages></lightning-messages>
+        <lightning-input-field  field-name="Name"></lightning-input-field>
+        <lightning-input-field  field-name="reportNo__c"></lightning-input-field>
+        <table border="2">
+                <thead class="headColor">
+                        <tr>
+                                <th colspan="3">
+                                        予算額
+                                </th>
+                                <th rowspan="2" class="yosannwidth">
+                                        精算額
+                                </th>
+                                <th rowspan="" class="jiwidth">
+                                        差引増△減額
+                                </th>
+                                <th rowspan="2" class="width12Percent">
+                                        備考
+                                </th>
+                        </tr>
+                        <tr>
+                                <th class="yosannwidth">国庫補助金</th>
+                                <th class="yosannwidth">県(都道府)負担金</th>
+                                <th class="jiwidth">計</th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <!--Row1-->
+                        <tr>
+                                <td>
+                                        <p>
+                                                <lightning-input-field variant='label-hidden' field-name="Item1__c"  data-field-name="countNum1_1"
+                                                >
+                                                </lightning-input-field>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-input-field variant='label-hidden' field-name="Item2__c" data-field-name="countNum2_1"
+                                                         >
+                                                </lightning-input-field>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-input-field variant='label-hidden' field-name="Item3__c" data-field-name="countNum3_1"
+                                                         >
+                                                </lightning-input-field>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-input-field variant='label-hidden' field-name="Item4__c" data-field-name="countNum4_1"
+                                                         >
+                                                </lightning-input-field>
+                                        </p>
+                                </td>
+                                <td>
+                                        <div style="display: flex;">
+                                                <lightning-input-field variant='label-hidden'  field-name="Item5__c" data-field-name="countNum5_1">
+                                                </lightning-input-field>
+                                                <div class="sannkakuSuziRight">
+                                                        <lightning-input-field variant='label-hidden' field-name="Item6__c" data-field-name="countNum6_1"
+                                                                 >
+                                                        </lightning-input-field>              
+                                                </div>
+                                        </div>
+                                </td>
+                                <!--備考-->
+                                <td rowspan="3">
+                                        <textarea name="biko" class="bikostyle"></textarea>
+                                </td>
+                        </tr>
+                        <!--Row2-->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <tr>
+                                <td>
+                                        <lightning-input-field variant='label-hidden' field-name="Item7__c" data-field-name="countNum1_2"
+                                                    name="input21"
+                                                   >
+                                        </lightning-input-field>
+                                </td>
+                                <td>
+                                        <lightning-input-field variant='label-hidden' field-name="Item8__c" data-field-name="countNum2_2"
+                                                    name="input22"
+                                                   >
+                                        </lightning-input-field>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-input-field variant='label-hidden' field-name="Item9__c" data-field-name="countNum3_2"
+                                                         >
+                                                </lightning-input-field>
+                                        </p>
+                                </td>
+                                <td>
+                                        <lightning-input-field variant='label-hidden' field-name="Item10__c" data-field-name="countNum4_2"
+                                                    name="input24"
+                                                   >
+                                        </lightning-input-field>
+                                </td>
+                                <td>
+                                        <div style="display: flex;">
+                                                <lightning-input-field variant='label-hidden' class="sannkakuMargin" field-name="Item11__c" data-field-name="countNum5_2">
+                                                </lightning-input-field>
+                                                <div class="sannkakuSuziRight">
+                                                        <lightning-input-field variant='label-hidden' field-name="Item12__c"
+                                                                 >
+                                                        </lightning-input-field>
+                                                </div>
+                                        </div>
+                                </td>
+                        </tr>
+                        <!--Row3-->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <tr>
+                                <td>
+                                        <lightning-input-field variant='label-hidden' field-name="Item13__c" data-field-name="countNum1_2"
+                                                    name="input31"
+                                                   >
+                                        </lightning-input-field>
+                                </td>
+                                <td>
+                                        <lightning-input-field variant='label-hidden' field-name="Item14__c" data-field-name="countNum2_2"
+                                                    name="input32"
+                                                   >
+                                        </lightning-input-field>
+                                </td>
+                                <td>
+                                        <p class="height32">
+                                                <lightning-input-field variant='label-hidden' field-name="Item15__c"
+                                                         >
+                                                </lightning-input-field>
+                                        </p>
+                                </td>
+                                <td>
+                                        <lightning-input-field variant='label-hidden' field-name="Item16__c" data-field-name="countNum4_2"
+                                                    name="input34"
+                                                   >
+                                        </lightning-input-field>
+                                </td>
+                                <td>
+                                        <div style="display: flex;">
+                                                <lightning-input-field variant='label-hidden' class="sannkakuMargin" field-name="Item17__c">
+                                                </lightning-input-field>
+                                                <div class="sannkakuSuziRight">
+                                                        <lightning-input-field variant='label-hidden' field-name="Item18__c"
+                                                                 >
+                                                        </lightning-input-field>
+                                                </div>
+                                        </div>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+        <div class="slds-m-top_medium">
+            <lightning-button class="slds-m-top_small" label="Cancel" onclick={handleReset}></lightning-button>
+            <lightning-button class="slds-m-top_small" type="submit" label="Save Record"></lightning-button>
+            <lightning-button label="検索" variant="destructive" onclick={handleSearch}></lightning-button>
+        </div>
+    </lightning-record-edit-form>
+</template>

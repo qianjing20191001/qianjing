@@ -1,0 +1,47 @@
+<apex:page standardController="Account" id="page">
+    <apex:form id="form">
+        <apex:pageBlock id="block">
+            <apex:pageBlockSection columns="1" id="section">
+                <apex:pageBlockSectionItem id="sectionItem">
+                    <apex:outputText value="{!$ObjectType.Account.Fields.Name.Label}" />
+                    <apex:outputPanel id="panel">
+                        <apex:inputText value="{!Account.Name}" id="accountName" />
+                        <img src="/s.gif" title="Lookup" class="lookupIcon"
+                            onfocus="this.className = 'lookupIconOn';"
+                            onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';"
+                            onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';"
+                            onClick="return popupSearch();"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+        window.onfocus = closedPopupWindow;
+        var popupWindow = null;
+        
+        function popupSearch() {
+            var width = 500;
+            var height = 500;
+            
+            var l = (screen.width * 0.3);
+            var t = (screen.height * 0.1);
+   
+            var url = "/apex/popupNameSearchPage";
+            popupWindow = PopUpWindow(url, l, t, width, height);
+            
+            return false;
+        }
+        
+        function closedPopupWindow() {
+            if (popupWindow != null && !popupWindow.closed) {
+                popupWindow.close();
+            }
+            return false;
+        }
+        
+        function PopUpWindow(url, l, t, width, height) {
+            return window.open(url, "window", "screenX=" + l + "px; screenY=" + t + "px: left=" + l + "px; top=" + t + "px; width=" + width + "px; height=" + height +"px; resizable:no; status:yes;"); 
+        }
+    </script>
+</apex:page>

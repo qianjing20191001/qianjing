@@ -1,0 +1,26 @@
+<aura:component  controller="SimpleAccountListController" implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="simpleAccounts" type="Object[]"/>
+    <aura:attribute name="acc" type="Account"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:card iconName="standard:account" title="simple accounts" class="slds-is-relative">
+
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <ul class="slds-list_vertical slds-has-dividers_top-space">
+                <aura:if isTrue="{!v.simpleAccounts.length > 0}">
+                    <aura:iteration items="{!v.simpleAccounts}" var="item">
+                        <li class="slds-list__item">
+                            <c:SimpleAccountUsingModal acc="{!item}"/>
+                        </li>
+                    </aura:iteration>
+                    <aura:set attribute="else">
+                        <li class="slds-list__item">
+                            <h3 class="slds-text-small slds-text-color_error">No accounts found.</h3>
+                        </li>
+                    </aura:set>
+                </aura:if>
+            </ul>
+            
+        </div>
+    </lightning:card>
+</aura:component>

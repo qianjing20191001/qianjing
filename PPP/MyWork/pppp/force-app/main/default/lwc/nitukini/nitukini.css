@@ -1,0 +1,20 @@
+table{
+    background: white;
+}
+.aligncenter{
+    text-align: center;
+}
+.rosensu{
+    display: flex;
+    width: 280px;
+}
+.rosensu1{
+    margin-top: 6px;
+}
+.align-right{
+    text-align: right;
+}
+.kouki{
+    display: flex;
+    width: 150px;
+}

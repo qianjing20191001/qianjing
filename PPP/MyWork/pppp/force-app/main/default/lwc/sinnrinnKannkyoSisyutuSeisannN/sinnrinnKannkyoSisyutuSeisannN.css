@@ -1,0 +1,95 @@
+table{
+    background-color: white;
+}
+.headheight{
+    height: 62.67px;
+}
+.sisyutu{
+    float: left;
+    flex-direction:row;
+}
+.tanni{
+    float: right;
+    flex-direction:row;
+}
+
+th{
+    text-align:center; /*設置水平居中*/
+    }
+
+.bikostyle1{
+    overflow: auto;
+    margin-top:0px;
+    margin-bottom:0px;
+    width: 100%;
+    font-size: 8px;
+    border-bottom-style: none;
+    border-left-style: hidden;
+    resize: none;
+    height: 384px;
+    max-height: 384px;
+}
+.bikostyle2{
+    overflow: hidden;
+    margin-top:0px;
+    margin-bottom:0px;
+    border-bottom-style: none;
+    border-left-style: hidden;
+    resize: none;
+    width: 100%; 
+    font-size: 8px;
+    height: 384px;
+    max-height: 384px;
+    
+    
+}
+.bikostyle3{
+    overflow: hidden;
+    margin-top:0px;
+    margin-bottom:0px; 
+    border-bottom-style: none;
+    border-left-style: hidden;
+    width: 100%;  
+    resize: none;
+    height: 93px;
+    max-height: 93px；
+    
+}
+.formatcenter{
+    text-align:center; /*設置水平居中*/
+}
+
+.numberRightAlign, .numberRightAlign input{
+    text-align: right;
+}
+p{
+    text-align: right;
+    height: 32px;
+    padding-top: 5px;
+}
+.yosannwidth{
+    width: 110px;
+}
+.width140{
+    width: 140px;
+}
+.fontaligncenter{
+    vertical-align: middle;
+}
+.headColor{
+    background: rgb(248,203,173);
+}
+.sumColor{
+    background: rgb(255,153,255);
+}
+.backcolor{
+    background-color: white;
+}
+.sannkakuSuziRight{
+    flex-grow:1;
+    text-align:right;
+    padding-bottom:8px;
+}
+.sannkakuMargin{
+    margin-left:5%
+}

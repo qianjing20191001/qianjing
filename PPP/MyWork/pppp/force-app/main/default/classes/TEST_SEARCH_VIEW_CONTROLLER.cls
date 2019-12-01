@@ -1,0 +1,3 @@
+public class TEST_SEARCH_VIEW_CONTROLLER {
+
+}

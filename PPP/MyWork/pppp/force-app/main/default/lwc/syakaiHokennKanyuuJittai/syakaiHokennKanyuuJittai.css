@@ -1,0 +1,95 @@
+table{
+    background-color: white; 
+}
+.center{ 
+    display: flex;
+}
+.right{
+    font-size: 20px;
+}
+.subheadsize{
+    font-size: 20px;   
+}
+.aligncenter{
+    text-align:center;
+}
+
+.topborderhidden{
+    border-top-style: hidden;
+}
+
+.borderbottomhidden{
+    border-bottom-style: hidden;
+}
+
+.ichi{
+    vertical-align:bottom;  
+}
+.tableSep{
+    border-collapse: separate;
+}
+
+.sitasen{
+    border-bottom-style: hidden;
+}
+.bordernone{
+    border-top-style: hidden;
+    border-bottom-style: hidden;
+}
+.fontsize{
+    font-size: 20px;
+}
+.fontaligncenter{
+    text-align: center;
+}
+
+.sameLevel{
+    display: flex;
+}
+.leftTable{
+    width: 50%;
+    text-align: end;
+    
+}
+.rightTable{
+    width: 50%;
+}
+.xiaobiaoti{
+    text-align: end;
+}
+.diaochabiao{
+    display: flex; margin-left:20%;
+    font-size: 18px;
+}
+.kurikosi{
+    display: flex; margin-left:20%;
+    font-size: 18px;
+}
+/* .numberRightAlign, .numberRightAlign input{
+    text-align: right;
+} */
+.headColor{
+    background: rgb(248,203,173);
+}
+.sumColor{
+    background: rgb(255,153,255);
+}
+td{
+    text-align: center;
+}
+
+.sannkakuSuziCenter{
+    flex-grow:1;
+    text-align:right;
+}
+.sannkakuMargin{
+    margin-right:38%
+}
+
+.sannkakuSuziCenter2{
+    flex-grow:1;
+    text-align:center;
+}
+.sannkakuMargin2{
+    margin-right:38%
+}

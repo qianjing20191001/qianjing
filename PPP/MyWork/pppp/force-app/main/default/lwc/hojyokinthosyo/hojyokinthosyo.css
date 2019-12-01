@@ -1,0 +1,48 @@
+table{
+    background-color: white;
+    width: 150%;
+}
+input{
+    border: 0;
+    width: 100%;
+}
+h1{
+    text-align:center; /*?置水平居中*/
+    background-color: white;
+    width: 150%;
+}
+h2, h3, br{
+    background-color: white;
+    width: 150%;
+}
+th{
+    text-align:center; /*?置水平居中*/
+}
+
+.stringLeftAlign{
+    text-align: left;
+}
+
+.numberRightAlign, .numberRightAlign input{
+    text-align: right;
+}
+
+.WidthSpecifyCol1{
+    width:8%;
+}
+.WidthSpecifyCol4{
+    width:8%;
+}
+.WidthSpecifyCol7{
+    width:8%;
+}
+
+.changeLine{
+    display: inline-flex;
+}
+
+.stringText{
+    height: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

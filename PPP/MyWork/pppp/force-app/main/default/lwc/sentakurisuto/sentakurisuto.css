@@ -1,0 +1,8 @@
+.slds-input{
+  text-align: right;
+  background-color: tomato;
+}
+
+.textalign .slds-input{
+  text-align: right;
+}

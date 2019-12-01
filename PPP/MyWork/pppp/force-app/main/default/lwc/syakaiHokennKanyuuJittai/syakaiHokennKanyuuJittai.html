@@ -1,0 +1,797 @@
+<template>
+    <div style="background:white">
+        <div class="sameLevel">
+            <table border="1" class="leftTable">
+                <tr>
+                    <td class="aligncenter">
+                        事務所
+                    </td>
+                    <td class="aligncenter">
+                        市町村
+                    </td>
+                    <td class="aligncenter">
+                        申請者
+                    </td>
+                    <td class="aligncenter">
+                        補助事業区分
+                    </td>
+                </tr>
+                <tr>
+                    <td class="aligncenter">
+                        長野地域振興局
+                    </td>
+                    <td class="aligncenter">
+                        須坂市
+                    </td>
+                    <td class="aligncenter">
+                        長野森林組合
+                    </td>
+                    <td class="aligncenter">
+                        森林環境保全直接支援事業（経営計画等：通常）
+                    </td>
+                </tr>
+            </table>
+
+            <div class="rightTable">
+                <br />
+                <div class="diaochabiao">社会保険等の加入実態状況調査表(新)
+                    <div class="kurikosi">H29国繰越(補正予算)&nbsp;&nbsp;&nbsp;&nbsp;(2回)</div>
+                </div>
+            </div>
+        </div>
+        </br></br>
+        <div style="background:white;">
+            <div>事業実施時間：　平成29年12月18日　　～　平成30年3月21日</div>
+        </div>
+        <table border="2" class="tableSep">
+
+            <thead class="headColor">
+                <tr>
+                    <!--HEAD 1行目-->
+                    <th rowspan="3" class="aligncenter sitasen">
+                        整理番号
+                    </th>
+                    <th rowspan="3" class="aligncenter sitasen" style="width: 8%">
+                        申請番号
+                    </th>
+                    <th rowspan="3" class="aligncenter sitasen">
+                        枝番
+                    </th>
+                    <th rowspan="3" class="aligncenter sitasen">
+                        番号
+                    </th>
+                    <th rowspan="3" class="aligncenter sitasen">
+                        作業従事者
+                    </th>
+                    <th rowspan="3" class="aligncenter sitasen">
+                        直営・請負
+                    </th>
+                    <th rowspan="2" colspan="2" class="aligncenter borderbottomhidden">
+                        労災保険
+                    </th>
+                    <th rowspan="2" colspan="2" class="aligncenter borderbottomhidden">
+                        雇用保険
+                    </th>
+                    <th rowspan="2" colspan="2" class="aligncenter borderbottomhidden">
+                        健康保険
+                    </th>
+                    <th rowspan="2" colspan="2" class="aligncenter borderbottomhidden">
+                        厚生年金保険
+                    </th>
+                    <th colspan="3" class="aligncenter">
+                        退職金共済
+                    </th>
+                    <th rowspan="3" class="aligncenter ichi sitasen">
+                        計
+                    </th>
+                    <th rowspan="3" class="aligncenter sitasen">
+                        雇用形態
+                    </th>
+                    <th rowspan="3" class="aligncenter sitasen" style="width: 8%">
+                        備考
+                    </th>
+                </tr>
+                <tr>
+                    <!--退職金共済 HEAD 2行目-->
+                    <th class="aligncenter bordernone" colspan="3">林退共・中退共・建退共</th>
+                </tr>
+                <tr>
+                    <!--労災保険 HEAD 3行目-->
+                    <th class="aligncenter sitasen">加入</th>
+                    <th class="aligncenter topborderhidden">6点</th>
+
+                    <!--雇用保険 HEAD 3行目-->
+                    <th class="aligncenter sitasen">加入</th>
+                    <th class="aligncenter topborderhidden">1点</th>
+
+                    <!--健康保険 HEAD 3行目-->
+                    <th class="aligncenter sitasen">加入</th>
+                    <th class="aligncenter topborderhidden">5点</th>
+                    <!--厚生年金保険 HEAD 3行目-->
+                    <th class="aligncenter sitasen">加入</th>
+                    <th class="aligncenter topborderhidden">9点</th>
+
+                    <!--退職金共済 HEAD 3行目-->
+                    <th class="aligncenter sitasen">加入</th>
+                    <th class="aligncenter sitasen">種別</th>
+                    <th class="aligncenter sitasen">2点/3点</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- inputXX 命名規則 X-X:[行数][列数]-->
+                    <!--Row1-->
+                    <td>
+                        <lightning-input style="text-align:center" value="1" type="number" name="input1-1" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="61162-2002" type="text" name="input1-2" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="1" type="number" name="input1-3" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="1" type="number" name="input1-4" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="原 弘明" type="text" name="input1-5" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="直営" type="text" name="input1-6" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum1_7" onchange={handleCount1} type="text"
+                            name="input1-7" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum1_8} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn8}></lightning-formatted-text>
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum1_9" onchange={handleCount1} type="text"
+                            name="input1-9" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum1_10} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn10}></lightning-formatted-text>
+                        </div>
+
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum1_11" onchange={handleCount1} type="text"
+                            name="input1-11" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum1_12} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn12}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum1_13" onchange={handleCount1} type="text"
+                            name="input1-12" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum1_14} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn14}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum1_15" onchange={handleCount1} type="text"
+                            name="input1-12" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="text1_16" onchange={handleCount1} value="林退共" type="text"
+                            name="input1-16" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum1_16} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn16}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum1} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn1_17}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input value="常用" type="text" name="input1-19" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="長野森林組合" type="text" name="input1-20" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- inputXX 命名規則 X-X:[行数][列数]-->
+                    <!--Row2-->
+                    <td>
+                        <lightning-input value="2" type="number" name="input2-1" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="61162-2002" type="text" name="input2-2" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="1" type="number" name="input2-3" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="1" type="number" name="input2-4" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="野平 大介" type="text" name="input2-5" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="直営" type="text" name="input2-6" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum2_7" onchange={handleCount2} type="text"
+                            name="input1-8" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum2_8} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn2_8}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum2_9" onchange={handleCount2} type="text"
+                            name="input1-9" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum2_10} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn2_10}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum2_11" onchange={handleCount2} type="text"
+                            name="input1-11" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum2_12} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn2_12}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum2_13" onchange={handleCount2} type="text"
+                            name="input1-12" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum2_14} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn2_14}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum2_15" onchange={handleCount2} type="text"
+                            name="input2-12" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="text2_16" onchange={handleCount2} value="林退共" type="text"
+                            name="input2-16" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum2_16} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn2_16}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum2} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn2_17}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input value="常用" type="text" name="input2-19" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="長野森林組合" type="text" name="input2-20" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- inputXX 命名規則 X-X:[行数][列数]-->
+                    <!--Row3-->
+                    <td>
+                        <lightning-input value="3" type="number" name="input3-1" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="61162-2002" type="text" name="input3-2" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="1" type="number" name="input3-3" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="1" type="number" name="input3-4" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="羽生田　新悟" type="text" name="input3-5" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="直営" type="text" name="input3-6" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum3_7" onchange={handleCount3} type="text"
+                            name="input3-7" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum3_8} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn3_8}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum3_9" onchange={handleCount3} type="text"
+                            name="input3-9" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum3_10} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn3_10}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum3_11" onchange={handleCount3} type="text"
+                            name="input3-11" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum3_12} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn3_12}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum3_13" onchange={handleCount3} type="text"
+                            name="input3-13" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum3_14} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn3_14}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="countNum3_15" onchange={handleCount3} type="text"
+                            name="input3-15" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input data-field-name="text3_16" onchange={handleCount3} value="林退共" type="text"
+                            name="input3-16" variant='label-hidden' label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum3_16} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn3_16}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum3} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn3_17}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td>
+                        <lightning-input value="常用" type="text" name="input3-19" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="長野森林組合" type="text" name="input3-20" variant='label-hidden'
+                            label="Enter some text"></lightning-input>
+                    </td>
+                </tr>
+                <!-- 合計行-->
+                <!--Row4-->
+                <tr style="height:32px;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="sumColor">
+                        <p class="fontaligncenter">
+                            <lightning-formatted-text value="合計"></lightning-formatted-text>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="numberRightAlign sumColor">
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum4} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn4}>
+                            </lightning-formatted-text>
+
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- 平均計算行-->
+                <!--Row5 -->
+                <tr style="height:32px;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="sumColor">
+                        <p class="fontaligncenter">
+                            <lightning-formatted-text value="平均"></lightning-formatted-text>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="numberRightAlign sumColor">
+                        <div style="display: flex;">
+                            <div class="sannkakuSuziCenter">
+                                <lightning-formatted-number value={countNum5} format-style="decimal">
+                                </lightning-formatted-number>
+                            </div>
+
+                            <lightning-formatted-text class="sannkakuMargin" value={tenn5}></lightning-formatted-text>
+                        </div>
+
+                    </td>
+                    <td></td>
+                    <td>
+                        <p class="fontaligncenter">
+                            <lightning-formatted-text value="15%"></lightning-formatted-text>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- inputXX 命名規則 X-X:[行数][列数]-->
+                    <!--Row6 輸入行-->
+                    <td>
+                        <lightning-input value="" type="number" name="input6-1" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-2" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="number" name="input6-3" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="number" name="input6-4" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-5" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-6" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-7" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-8" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-9" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-10" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-11" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-12" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-13" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-14" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-15" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-16" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input1-17" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input1-18" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input1-19" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input1-20" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- inputXX 命名規則 X-X:[行数][列数]-->
+                    <!--Row7 輸入行-->
+                    <td>
+                        <lightning-input value="" type="number" name="input6-1" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-2" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="number" name="input6-3" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="number" name="input6-4" variant='label-hidden'
+                            label="Enter a decimal value"></lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-5" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-6" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-7" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-8" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-9" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-10" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-11" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-12" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-13" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-14" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-15" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input6-16" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input1-17" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input1-18" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input1-19" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input value="" type="text" name="input1-20" variant='label-hidden'
+                            label="Enter some text">
+                        </lightning-input>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</template>

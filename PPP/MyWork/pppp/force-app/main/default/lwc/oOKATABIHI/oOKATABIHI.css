@@ -1,0 +1,23 @@
+table{
+    background-color: white;
+}
+input{
+    text-align:center;
+    border: 0;
+    width: 100%;
+}
+h1{
+text-align:center; /*?置水平居中*/
+}
+th{
+text-align:center; /*?置水平居中*/
+}
+td{
+text-align:center; /*?置水平居中*/
+}
+table{
+    width: 100%;
+}
+.sen1,.sen2,.sen3,.sen4,.sen5{
+    border: 0;
+}

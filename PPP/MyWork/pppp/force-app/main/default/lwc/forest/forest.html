@@ -1,0 +1,1080 @@
+<template>
+        <h1>
+            3　林業専用道整備事業
+        </h1>
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th rowspan="3">
+                        <p><span class="vertical">区分</span></p>
+                    </th>
+                    <th rowspan="3" colspan="3">
+                        路線名
+                    </th>
+                    <th rowspan="3" colspan="2">
+                            施行場所</br>（群市町村）
+                    </th>
+                    <th rowspan="3" colspan="2">
+                            施行主体　　
+                    </th>
+                    <th rowspan="3">
+                        車</br>道</br>幅</br>員</br>
+                        <div class="unit">m</div>
+                    </th>
+                    <th rowspan="3" colspan="2">
+                            延　長</br>
+                        <div class="unit">m</div>
+                    </th>
+                    <th rowspan="3" colspan="2">
+                            単　価</br>
+                        <div class="unit">円</div>
+                    </th>
+                    <th colspan="3">
+                        事　業　費　内　訳
+                    </th>
+                    <th rowspan="3" colspan="2">
+                        本工事費等</br>と指導監督</br>費の計</br>（A）</br>
+                        円
+                    </th>
+                    <th rowspan="3">
+                        国</br>庫</br>補</br>助</br>率</br>
+                        <div class="unit">％</div>
+                    </th>
+                    <th colspan="3">
+                        経　費　内　訳
+                    </th>                
+                    <th rowspan="3">
+                        工　期<br>自～至
+                    </th>
+                    <th rowspan="3">
+                        備　考
+                    </th>   
+                </tr>  
+                <tr>
+                    <th rowspan="2">
+                        本工事費</br>
+                        <div class="unit">円</div>
+                    </th>
+                    <th colspan="2" >
+                        指導監督費
+                    </th>
+                    <th rowspan="2">
+                        国庫補助金</br>
+                        <div class="unit">円</div>
+                    </th>
+                    <th rowspan="2">
+                        都道府県負担金</br>
+                        <div class="unit">円</div>
+                    </th>
+                    <th rowspan="2">
+                        施行主体負担金</br>
+                        <div class="unit">円</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        金額（B)</br>
+                        <div class="unit">円</div>
+                    </th>
+                    <th>
+                        (B)/(A)</br>
+                        <div class="unit">％</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="7">
+                        <p><span class="vertical">林業専用道整備事業</span></p>
+                    </td>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden' value="城山線"></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden' value="三好市"></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom">  <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden' value="三好市"></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' value="3.0" step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-formatted-number value={countNum1_1}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum1_1" onchange={handleCount1} label="Roadway width2" variant='label-hidden' value="0"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum1_2" onchange={handleCount1}  label="Roadway width3" variant='label-hidden' value="450"></lightning-input>                        
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden' value="69667"></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-formatted-number value={countNum2_1}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum2_1" onchange={handleCount2} label="Construction cost2" variant='label-hidden' value="11100000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum2_2" onchange={handleCount2} label="Construction cost3" variant='label-hidden' value="18900000"></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-formatted-number value={countNum3_1}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum3_1" onchange={handleCount2} label="price2" variant='label-hidden' value="1024000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum3_2" onchange={handleCount2} label="price3" variant='label-hidden' value="326000"></lightning-input>
+                    </td>      
+                    <td class="top" > <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden' value="4.3"></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                        <p><lightning-formatted-number value={countNum4_1}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_2}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_3}></lightning-formatted-number></p>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden' value="50"></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-formatted-number value={countNum5_1}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum5_1" onchange={handleCount3} label="price2" variant='label-hidden' value="6052000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum5_2" onchange={handleCount3} label="price3" variant='label-hidden' value="9613000"></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-formatted-number value={countNum6_1}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum6_1" onchange={handleCount4} label="price2" variant='label-hidden' value="2177000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum6_2" onchange={handleCount4} label="price3" variant='label-hidden' value="2998000"></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-formatted-number value={countNum7_1}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum7_1" onchange={handleCount5} label="price2" variant='label-hidden' value="3885000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum7_2" onchange={handleCount5} label="price3" variant='label-hidden' value="6615000"></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden' value="H28.10.15">
+                        </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                        </div>
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden' value="H29.7.31">
+                        </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden' value="森林専用道整備・開設">
+                        </lightning-input>    
+                    </td>  
+                </tr>                         
+                <tr>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden' value="城山線"></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden' value="三好市"></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden' value="三好市"></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' value="3.0" step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-formatted-number value={countNum1_2}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum1_3" onchange={handleCount1} label="Roadway width2" variant='label-hidden' value="0"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum1_4" onchange={handleCount1}  label="Roadway width3" variant='label-hidden' value="250"></lightning-input>                   
+                    </td>   
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden' value="69667"></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-formatted-number value={countNum2_2}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum2_3" onchange={handleCount2} label="Construction cost2" variant='label-hidden' value="10664000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum2_4" onchange={handleCount2} label="Construction cost3" variant='label-hidden' value="19336000"></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-formatted-number value={countNum3_2}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum3_3" onchange={handleCount2} label="price2" variant='label-hidden' value="1010000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum3_4" onchange={handleCount2} label="price3" variant='label-hidden' value="340000"></lightning-input>
+                    </td>      
+                    <td class="top b-a"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden' value="4.3"></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                        <p><lightning-formatted-number value={countNum4_4}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_5}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_6}></lightning-formatted-number></p>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden' value="50"></lightning-input>
+                    </td>       
+                    <td class="right">  <!--国庫補助金-->
+                        <lightning-formatted-number value={countNum5_2}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum5_3" onchange={handleCount3} label="price2" variant='label-hidden' value="5837000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum5_4" onchange={handleCount3} label="price3" variant='label-hidden' value="9838000"></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-formatted-number value={countNum6_2}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum6_3" onchange={handleCount4} label="price2" variant='label-hidden' value="2105000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum6_4" onchange={handleCount4} label="price3" variant='label-hidden' value="3070000"></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-formatted-number value={countNum7_2}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum7_3" onchange={handleCount5} label="price2" variant='label-hidden' value="3732000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum7_4" onchange={handleCount5} label="price3" variant='label-hidden' value="3768000"></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden' value="H29.3.19">
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden' value="H29.12.31">
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden' value="森林専用道整備・開設">
+                        </lightning-input>    
+                    </td>   
+                </tr>
+                <tr>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden' value="城山線"></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden' value="三好市"></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden' value="三好市"></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' value="3.0" step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-formatted-number value={countNum1_3}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum1_5" onchange={handleCount1} label="Roadway width2" variant='label-hidden' value="0"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum1_6" onchange={handleCount1}  label="Roadway width3" variant='label-hidden' value="500"></lightning-input>                      
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden' value="69667"></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-formatted-number value={countNum2_3}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum2_5" onchange={handleCount2} label="Construction cost2" variant='label-hidden' value="28376000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum2_6" onchange={handleCount2} label="Construction cost3" variant='label-hidden' value="22412000"></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-formatted-number value={countNum3_3}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum3_5" onchange={handleCount2} label="price2" variant='label-hidden' value="1750000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum3_6" onchange={handleCount2} label="price3" variant='label-hidden' value="535000"></lightning-input>
+                    </td>      
+                    <td class="top b-a"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden' value="4.3"></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                        <p><lightning-formatted-number value={countNum4_7}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_8}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_9}></lightning-formatted-number></p>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden' value="50"></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-formatted-number value={countNum5_3}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum5_5" onchange={handleCount3} label="price2" variant='label-hidden' value="15063000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum5_6" onchange={handleCount3} label="price3" variant='label-hidden' value="11473000"></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-formatted-number value={countNum6_3}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum6_5" onchange={handleCount4} label="price2" variant='label-hidden' value="5131000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum6_6" onchange={handleCount4} label="price3" variant='label-hidden' value="3630000"></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-formatted-number value={countNum7_3}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum7_5" onchange={handleCount5} label="price2" variant='label-hidden' value="9932000"></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum7_6" onchange={handleCount5} label="price3" variant='label-hidden' value="7844000"></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden' value="H29.3.16">
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden' value="H30.2.22">
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden' value="森林専用道整備・開設">
+                        </lightning-input>    
+                    </td>   
+                </tr>  
+                <tr>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-formatted-number value={countNum1_4}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum1_7" onchange={handleCount1} label="Roadway width2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum1_8" onchange={handleCount1}  label="Roadway width3" variant='label-hidden'></lightning-input>                      
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"> <!--本工事費等-->
+                        <lightning-formatted-number value={countNum2_4}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum2_7" onchange={handleCount2} label="Construction cost2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum2_8" onchange={handleCount2} label="Construction cost3" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-formatted-number value={countNum3_4}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum3_7" onchange={handleCount2} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum3_8" onchange={handleCount2} label="price3" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="top b-a"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                        <p><lightning-formatted-number value={countNum4_10}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_11}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_12}></lightning-formatted-number></p>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-formatted-number value={countNum5_4}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum5_7" onchange={handleCount3} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum5_8" onchange={handleCount3} label="price3" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-formatted-number value={countNum6_4}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum6_7" onchange={handleCount4} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum6_8" onchange={handleCount4} label="price3" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-formatted-number value={countNum7_4}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum7_7" onchange={handleCount5} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum7_8" onchange={handleCount5} label="price3" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>   
+                </tr>      
+                <tr>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長-->
+                        <lightning-formatted-number value={countNum1_5}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum1_9" onchange={handleCount1} label="Roadway width2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum1_10" onchange={handleCount1}  label="Roadway width3" variant='label-hidden'></lightning-input>                      
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-formatted-number value={countNum2_5}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum2_9" onchange={handleCount2} label="Construction cost2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum2_10" onchange={handleCount2} label="Construction cost3" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-formatted-number value={countNum3_5}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum3_9" onchange={handleCount2} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum3_10" onchange={handleCount2} label="price3" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                        <p><lightning-formatted-number value={countNum4_13}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_14}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_15}></lightning-formatted-number></p>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-formatted-number value={countNum5_5}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum5_9" onchange={handleCount3} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum5_10" onchange={handleCount3} label="price3" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-formatted-number value={countNum6_5}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum6_9" onchange={handleCount4} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum6_10" onchange={handleCount4} label="price3" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-formatted-number value={countNum7_5}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum7_9" onchange={handleCount5} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum7_10" onchange={handleCount5} label="price3" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>       
+                </tr>
+                <tr>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-formatted-number value={countNum1_6}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum1_11" onchange={handleCount1} label="Roadway width2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum1_12" onchange={handleCount1}  label="Roadway width3" variant='label-hidden'></lightning-input>                     
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-formatted-number value={countNum2_6}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum2_11" onchange={handleCount2} label="Construction cost2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum2_12" onchange={handleCount2} label="Construction cost3" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-formatted-number value={countNum3_6}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum3_11" onchange={handleCount2} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum3_12" onchange={handleCount2} label="price3" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                        <p><lightning-formatted-number value={countNum4_16}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_17}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_18}></lightning-formatted-number></p>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-formatted-number value={countNum5_6}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum5_11" onchange={handleCount3} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum5_12" onchange={handleCount3} label="price3" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-formatted-number value={countNum6_6}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum6_11" onchange={handleCount4} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum6_12" onchange={handleCount4} label="price3" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-formatted-number value={countNum7_6}></lightning-formatted-number>
+                        <lightning-input type="number" data-field-name="countNum7_11" onchange={handleCount5} label="price2" variant='label-hidden'></lightning-input>
+                        <lightning-input type="number" data-field-name="countNum7_12" onchange={handleCount5} label="price3" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>   
+                </tr>            
+                <tr>
+                    <td class="bottom" colspan="8">
+                    <p class="left">　　計</p>
+                        <div class="huanhang">
+                            （路線数
+                             <lightning-input type="number" name="input1" label="Enter a date" variant='label-hidden'></lightning-input>
+                                路線)　　　　          
+                        </div>
+                    </td>      
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <p><lightning-formatted-number value={countNum1_7}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum1_8}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum1_9}></lightning-formatted-number></p>
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <p><lightning-formatted-number value={countNum2_7}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum2_8}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum2_9}></lightning-formatted-number></p>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <p><lightning-formatted-number value={countNum3_7}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum3_8}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum3_9}></lightning-formatted-number></p>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                        <p><lightning-formatted-number value={countNum4_19}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_20}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum4_21}></lightning-formatted-number></p>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <p><lightning-formatted-number value={countNum5_7}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum5_8}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum5_9}></lightning-formatted-number></p>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <p><lightning-formatted-number value={countNum6_7}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum6_8}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum6_9}></lightning-formatted-number></p>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <p><lightning-formatted-number value={countNum7_7}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum7_8}></lightning-formatted-number></p>
+                        <p><lightning-formatted-number value={countNum7_9}></lightning-formatted-number></p>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>   
+                </tr>
+                <tr>
+                    <td rowspan="4">
+                        <p><span class="vertical">整備</br>作業ポイント</span></p>
+                    </td>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-input type="number"  label="Roadway width1" variant='label-hidden'></lightning-input>                     
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-input type="number"  label="Construction cost1" variant='label-hidden' ></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden' ></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                            <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>   
+                </tr>
+                <tr>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                        <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                        <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                        <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                        <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-input type="number"  label="Roadway width1" variant='label-hidden'></lightning-input>
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-input type="number"  label="Construction cost1" variant='label-hidden' ></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden' ></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                            <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>                                
+                </tr>  
+                <tr>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                        <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-input type="number" label="Roadway width1" variant='label-hidden'></lightning-input>                      
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-input type="number"  label="Construction cost1" variant='label-hidden' ></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden' ></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                            <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>                               
+                </tr>   
+                <tr>
+                    <td colspan="8">
+                        <p class="left height-position" >計</p>
+                        <div class="huanhang">
+                            （路線数
+                            <lightning-input type="number" name="input1" label="Enter a date" variant='label-hidden'></lightning-input>
+                            路線) （
+                            <lightning-input type="number" name="input1" label="Enter a date" variant='label-hidden'></lightning-input>
+                            箇所）
+                        </div>
+                    </td>
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-input type="number" label="Roadway width1" variant='label-hidden'></lightning-input>                       
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-input type="number"  label="Construction cost1" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                            <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>   
+                </tr>    
+                <tr>
+                    <td rowspan="5"> 
+                        <P><span class="vertical">接続路整備</span></p>
+                    </td>
+                    <td colspan="3" class="bottom">  <!--路線名--> 
+                        <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                    </td>    
+                    <td colspan="2" class="bottom"> <!--施行場所--> 
+                            <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td colspan="2" class="bottom"> <!--施行主体-->  
+                            <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                    </td>        
+                    <td class="bottom"> <!--車道幅員-->
+                            <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                    </td>        
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-input type="number" label="Roadway width1" variant='label-hidden'></lightning-input>
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-input type="number"  label="Construction cost1" variant='label-hidden' ></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden' ></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                            <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>                                   
+                </tr>
+                <tr>
+                        <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                        </td>    
+                        <td colspan="2" class="bottom"> <!--施行場所--> 
+                                <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                        </td>     
+                        <td colspan="2" class="bottom"> <!--施行主体-->  
+                                <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                        </td>        
+                        <td class="bottom"> <!--車道幅員-->
+                                <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                        </td>        
+                        <td class="right" colspan="2"> <!--延長--> 
+                            <lightning-input type="number" label="Roadway width1" variant='label-hidden'></lightning-input>                     
+                        </td>  
+                        <td colspan="2" class="top right">  <!--単価--> 
+                            <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                        </td>      
+                        <td class="right"><!--本工事費等-->
+                            <lightning-input type="number"  label="Construction cost1" variant='label-hidden' ></lightning-input>
+                        </td>        
+                        <td class="right"> <!--金額（B）--> 
+                            <lightning-input type="number"  label="price1" variant='label-hidden' ></lightning-input>
+                        </td>      
+                        <td class="top"> <!--（B）/（A）-->  
+                            <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                        </td> 
+                        <td colspan="2" class="right"><!--(A)-->   
+                                <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                        </td>
+                        <td class="right"><!--国庫補助率-->
+                            <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                        </td>       
+                        <td class="right"> <!--国庫補助金-->
+                            <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                        </td>       
+                        <td class="right"><!--都道府県負担金-->  
+                            <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                        </td>     
+                        <td class="right"><!--施行主体負担金--> 
+                            <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                        </td>       
+                        <td ><!--工期-->
+                            <div class="huanhang">
+                                    <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                    </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                    </div>
+                                    <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                    </lightning-input>
+                        </td>       
+                        <td class="top fontSize2"><!--備考-->  
+                            <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                            </lightning-input>    
+                        </td>        
+                </tr>   
+                <tr>
+                        <td colspan="3" class="bottom">  <!--路線名--> 
+                            <lightning-input type="text"  label="Route name" variant='label-hidden'></lightning-input>
+                        </td>    
+                        <td colspan="2" class="bottom"> <!--施行場所--> 
+                                <lightning-input type="text"  label="Construction location" variant='label-hidden'></lightning-input>
+                        </td>     
+                        <td colspan="2" class="bottom"> <!--施行主体-->  
+                                <lightning-input type="text"  label="Enforcement subject" variant='label-hidden'></lightning-input>
+                        </td>        
+                        <td class="bottom"> <!--車道幅員-->
+                                <lightning-input type="number"  label="Roadway width" variant='label-hidden' step="0.1"></lightning-input>
+                        </td>        
+                        <td class="right" colspan="2"> <!--延長--> 
+                            <lightning-input type="number" label="Roadway width1" variant='label-hidden'></lightning-input>                      
+                        </td>  
+                        <td colspan="2" class="top right">  <!--単価--> 
+                            <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                        </td>      
+                        <td class="right"><!--本工事費等-->
+                            <lightning-input type="number"  label="Construction cost1" variant='label-hidden' ></lightning-input>
+                        </td>        
+                        <td class="right"> <!--金額（B）--> 
+                            <lightning-input type="number"  label="price1" variant='label-hidden' ></lightning-input>
+                        </td>      
+                        <td class="top"> <!--（B）/（A）-->  
+                            <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                        </td> 
+                        <td colspan="2" class="right"><!--(A)-->   
+                                <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                        </td>
+                        <td class="right"><!--国庫補助率-->
+                            <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                        </td>       
+                        <td class="right"> <!--国庫補助金-->
+                            <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                        </td>       
+                        <td class="right"><!--都道府県負担金-->  
+                            <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                        </td>     
+                        <td class="right"><!--施行主体負担金--> 
+                            <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                        </td>       
+                        <td ><!--工期-->
+                            <div class="huanhang">
+                                    <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                    </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                    </div>
+                                    <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                    </lightning-input>
+                        </td>       
+                        <td class="top fontSize2"><!--備考-->  
+                            <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                            </lightning-input>    
+                        </td>    
+                </tr>   
+                <tr>
+                    <td colspan="8" rowspan="2">
+                        <p class="left">計</p>
+                        <div class="huanhang height-position">
+                            （路線数
+                             <lightning-input type="number" name="input1" label="Enter a date" variant='label-hidden'></lightning-input>
+                                路線)　　　       
+                        </div>
+                    </td> 
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-input type="number" label="Roadway width1" variant='label-hidden'></lightning-input>                       
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-input type="number"  label="Construction cost1" variant='label-hidden' ></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden' ></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                            <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td>              
+                </tr>
+                <tr>
+                    <td class="right" colspan="2"> <!--延長--> 
+                        <lightning-input type="number" label="Roadway width1" variant='label-hidden'></lightning-input>                      
+                    </td>  
+                    <td colspan="2" class="top right">  <!--単価--> 
+                        <lightning-input type="number"  label="unit price" variant='label-hidden'></lightning-input>
+                    </td>      
+                    <td class="right"><!--本工事費等-->
+                        <lightning-input type="number"  label="Construction cost1" variant='label-hidden' ></lightning-input>
+                    </td>        
+                    <td class="right"> <!--金額（B）--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden' ></lightning-input>
+                    </td>      
+                    <td class="top"> <!--（B）/（A）-->  
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td> 
+                    <td colspan="2" class="right"><!--(A)-->   
+                            <lightning-input type="number"  label="sum1" variant='label-hidden'></lightning-input>
+                    </td>
+                    <td class="right"><!--国庫補助率-->
+                        <lightning-input type="number"  label="percent" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"> <!--国庫補助金-->
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td class="right"><!--都道府県負担金-->  
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>     
+                    <td class="right"><!--施行主体負担金--> 
+                        <lightning-input type="number"  label="price1" variant='label-hidden'></lightning-input>
+                    </td>       
+                    <td ><!--工期-->
+                        <div class="huanhang">
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input><p class="fontSize1">～&nbsp;</p><br/>
+                                </div>
+                                <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                                </lightning-input>
+                    </td>       
+                    <td class="top fontSize2"><!--備考-->  
+                        <lightning-input type="text"  label="Construction period" variant='label-hidden'>
+                        </lightning-input>    
+                    </td> 
+                </tr>                 
+            </tbody>
+        </table>
+            <div class="hosoku">
+            <p>&nbsp;(注)　1　
+                 一路線に施行主体が2以上ある場合は施行主体毎に区分して記載すること。</p>
+            <p>　　　2　
+                「事業費内訳」の「本工事費等等」とは、工事費の内工事雑貨を除いたものである。</P>
+            <p>　　　3　
+                「事業費内訳」の「指導監督費（B）」欄は林野庁長官が別で定める「指導監督費」を記載すること。</p>
+            <p>　　　4　
+                要網第１５に定める機械機器の購入がある場合には、その品目、規格、単価、数量及び
+                金額を記載した施行主体毎の「機械機器費」の内訳を添付すること。</P>
+            </div>
+    </template>

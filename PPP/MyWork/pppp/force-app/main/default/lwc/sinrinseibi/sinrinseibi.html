@@ -1,0 +1,722 @@
+<template>
+        <h1>2.森林環境保全整備事業(林道専用道整備を除く)</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="3" rowspan="2">
+                        区分
+                    </th>
+                    <th rowspan="2" colspan="2">
+                        事業量
+                    </th>
+                    <th rowspan="2">
+                        事業費
+                    </th>
+                    <th colspan="3">
+                        事業費内訳
+                    </th>
+                    <th rowspan="2">
+                        備考
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        国庫補助金    
+                    </th>
+                     <th>
+                        県負担金    
+                    </th>
+                    <th>
+                        所有者(施行者)・
+                        <br/>施行主体等負担金    
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4" class="kubun">
+                       森林環境保全<br/>直接支援事業     
+                    </td>
+                    <td class="zentai">
+                        全体
+                    </td> 
+                    <td>
+                        
+                    </td>
+                    <td>
+                            <lightning-input type="number" 
+                            value="1080"
+                            variant='label-hidden'  
+                            class="zentaijigyoryo">
+                            </lightning-input>       
+                    </td>
+                    <td>
+                        ha
+                    </td>
+                    <td>
+                        <p><lightning-formatted-number value={countNum1} format-style="decimal" ></lightning-formatted-number></p>
+                        <lightning-formatted-number data-field-name="countNum12" value="1340000000" format-style="decimal" ></lightning-formatted-number>
+                    </td>
+                    <td>
+                            <lightning-input type="number" 
+                            value="402000000"
+                            variant='label-hidden' 
+                            name="countNum1_1" 
+                            data-field-name="countNum1_1" 
+                            onchange={handleCount1} 
+                            class="zentaijigyoryo" >
+                            </lightning-input>
+                    </td>
+                    <td>
+                            <lightning-input type="number" 
+                            value="175000000"
+                            variant='label-hidden'  
+                            name="countNum1_2" 
+                            data-field-name="countNum1_2" 
+                            onchange={handleCount1}
+                            class="zentaijigyoryo" >
+                            </lightning-input>
+                    </td>
+                    <td>
+                            <lightning-input type="number" 
+                            value="734300000"
+                            variant='label-hidden'  
+                            name="countNum1_3" 
+                            data-field-name="countNum1_3" 
+                            onchange={handleCount1}
+                            class="zentaijigyoryo" >
+                            </lightning-input>
+                    </td>
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                            class="zentaijigyoryo" >
+                            </lightning-input>
+                    </td> 
+                      
+                </tr>
+                <tr>
+                    <td class="kuhaku">
+                    </td>
+                    <td class="utiken">
+                        うち県補助事業
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="1025"
+                            variant='label-hidden'  
+                            class="zentaijigyoryo1" >
+                            </lightning-input>
+                    </td>
+                    <td>
+                        ha
+                    </td> 
+                    <td>
+                        <lightning-formatted-number value={countNum2} format-style="decimal" ></lightning-formatted-number>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="381090000"
+                            variant='label-hidden' 
+                            name="countNum2_1" 
+                            data-field-name="countNum2_1" 
+                            onchange={handleCount2} 
+                            class="zentaijigyoryo1" >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="154910000"
+                            variant='label-hidden' 
+                            name="countNum2_2" 
+                            data-field-name="countNum2_2" 
+                            onchange={handleCount2}                                         
+                            class="zentaijigyoryo1" >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="734300000"
+                            variant='label-hidden' 
+                            name="countNum2_3" 
+                            data-field-name="countNum2_3" 
+                            onchange={handleCount2} 
+                            class="zentaijigyoryo1" >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                            class="zentaijigyoryo1" >
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="2" class="textleft">
+                        指導監督費
+                    </td>
+                     <td colspan="2"></td> 
+                     <td>
+                            <lightning-formatted-number value={countNum3} format-style="decimal" ></lightning-formatted-number>
+                     </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="6000000"
+                            variant='label-hidden'
+                            name="countNum3_1" 
+                            data-field-name="countNum3_1" 
+                            onchange={handleCount3}    >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="14000000"
+                            variant='label-hidden'
+                            name="countNum3_2" 
+                            data-field-name="countNum3_2" 
+                            onchange={handleCount3}   >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            variant='label-hidden' 
+                            name="countNum3_3" 
+                            data-field-name="countNum3_3" 
+                            onchange={handleCount3}  >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'   >
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        合計
+                    </td> 
+                    <td colspan="2"></td> 
+                    <td><p><lightning-formatted-number value={countNum4} format-style="decimal"></lightning-formatted-number></p>
+                        <lightning-formatted-number value={countNum13} format-style="decimal" ></lightning-formatted-number></td>
+                    <td>
+                        <lightning-formatted-number value={countNum4_1} format-style="decimal"></lightning-formatted-number>
+                    </td> 
+                    <td>
+                        <lightning-formatted-number value={countNum4_2} format-style="decimal"></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                        <lightning-formatted-number value={countNum4_3} format-style="decimal"></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'   
+                            class="zentaijigyoryo">
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td rowspan="10" class="kubun">
+                        環境林整備事業
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" class="textleft">
+                        公的森林整備
+                    </td> 
+                     <td>
+                            <lightning-input type="number" 
+                            value="385"
+                            variant='label-hidden'  
+                            >
+                            </lightning-input>
+                    </td>
+                    <td>
+                        ha
+                    </td>
+                    <td>
+                        <lightning-formatted-number value={countNum5} format-style="decimal" ></lightning-formatted-number>
+                    </td> 
+                    <td>
+                            
+                            <lightning-input type="number" 
+                            value="34950000"
+                            variant='label-hidden'  
+                            class="zentaijigyoryo"
+                            name="countNum5_1" 
+                            data-field-name="countNum5_1" 
+                            onchange={handleCount5} >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="15050000"
+                            variant='label-hidden' 
+                            name="countNum5_2" 
+                            data-field-name="countNum5_2" 
+                            onchange={handleCount5}
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="34950000"
+                            variant='label-hidden'
+                            name="countNum5_3" 
+                            data-field-name="countNum5_3" 
+                            onchange={handleCount5}  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="2" class="textleft">
+                        被害森林整備
+                    </td> 
+                     <td>
+                            <lightning-input type="number" 
+                            value="30"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                        ha
+                    </td>
+                    <td>
+                        <lightning-formatted-number value={countNum6} format-style="decimal" ></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="22950000"
+                            variant='label-hidden'  
+                            name="countNum6_1" 
+                            data-field-name="countNum6_1" 
+                            onchange={handleCount6} 
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="10050000"                                        
+                            variant='label-hidden'  
+                            name="countNum6_2" 
+                            data-field-name="countNum6_2" 
+                            onchange={handleCount6}
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="43500000"                                        
+                            variant='label-hidden'  
+                            name="countNum6_3" 
+                            data-field-name="countNum6_3" 
+                            onchange={handleCount6} 
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="2" class="textleft">
+                        保全松林緊急保護整備
+                    </td>
+                     <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                        ha
+                    </td>
+                    <td>
+                        <lightning-formatted-number format-style="decimal" ></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td class="zentai">
+                        全体
+                    </td> 
+                    <td>
+                    </td>
+                    <td>
+                            <lightning-input type="number" 
+                            value="415"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td>
+                    <td>
+                        ha
+                    </td> 
+                    <td>
+                            <lightning-formatted-number value={countNum7} format-style="decimal" ></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="57900000"
+                            variant='label-hidden'  
+                            name="countNum7_1" 
+                            data-field-name="countNum7_1" 
+                            onchange={handleCount7}  
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="25100000"
+                            variant='label-hidden'
+                            name="countNum7_2" 
+                            data-field-name="countNum7_2" 
+                            onchange={handleCount7}    
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="110000000"
+                            variant='label-hidden'  
+                            name="countNum7_3" 
+                            data-field-name="countNum7_3" 
+                            onchange={handleCount7}   
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td class="kuhaku">
+                    </td>
+                    <td class="utiken">
+                        うち県補助事業
+                    </td> 
+                    
+                         <td>
+                            <lightning-input type="number" 
+                            value="415"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                        </td> 
+                        <td>
+                            ha
+                        </td>
+                        <td>
+                                <lightning-formatted-number value={countNum8} format-style="decimal" ></lightning-formatted-number>
+
+                        </td> 
+                        <td>
+                                <lightning-input type="number" 
+                                value="57900000"
+                                variant='label-hidden'  
+                                name="countNum8_1" 
+                                data-field-name="countNum8_1" 
+                                onchange={handleCount8}   
+                                >
+                                </lightning-input>
+                        </td> 
+                        <td>
+                                <lightning-input type="number" 
+                                value="25100000"
+                                variant='label-hidden'  
+                                name="countNum8_2" 
+                                data-field-name="countNum8_2" 
+                                onchange={handleCount8} 
+                                >
+                                </lightning-input>
+                        </td> 
+                        <td>
+                                <lightning-input type="number" 
+                                value="110000000"
+                                variant='label-hidden'  
+                                name="countNum8_3" 
+                                data-field-name="countNum8_3" 
+                                onchange={handleCount8}
+                                >
+                                </lightning-input>
+                        </td> 
+                        <td>
+                                <lightning-input type="text" 
+                                name="input40"
+                                variant='label-hidden'  
+                                  
+                                >
+                                </lightning-input>
+                        </td> 
+                </tr><tr>
+                    <td colspan="2" class="textleft">
+                        指導監督費
+                    </td>
+                     <td colspan="2">
+                    </td>
+                    <td>
+                        <lightning-formatted-number value={countNum9} format-style="decimal" ></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="2100000"
+                            variant='label-hidden'  
+                            name="countNum9_1" 
+                            data-field-name="countNum9_1" 
+                            onchange={handleCount9}
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            value="4900000"
+                            variant='label-hidden'  
+                            name="countNum9_2" 
+                            data-field-name="countNum9_2" 
+                            onchange={handleCount9}
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            variant='label-hidden'  
+                            name="countNum9_3" 
+                            data-field-name="countNum9_3" 
+                            onchange={handleCount9}
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                              
+                            >
+                            </lightning-input>
+                    </td> 
+                </tr><tr>
+                    <td colspan="2" class="textleft">
+                        森林災害等修復林道開設<br/>(指導監督費を除く)
+                    </td>
+                <td colspan="2">
+               </td>
+                    <td>
+                            <lightning-formatted-number  format-style="decimal" ></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            class="zentaijigyoryo1"
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            class="zentaijigyoryo1"
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            class="zentaijigyoryo1"
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            class="zentaijigyoryo1"
+                            >
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                        指導監督費
+                    </td>
+                    <td colspan="2">
+                        </td>
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="number" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            >
+                            </lightning-input>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            >
+                            </lightning-input>
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        合計
+                    </td>
+                    <td colspan="2">
+                        </td>
+                    <td>
+                            <lightning-formatted-number value={countNum10} format-style="decimal" ></lightning-formatted-number>
+                    </td> 
+                    <td>
+                            <lightning-formatted-number value={countNum10_1} format-style="decimal" ></lightning-formatted-number>
+                    </td> 
+                    <td>
+                            <lightning-formatted-number value={countNum10_2} format-style="decimal" ></lightning-formatted-number>
+                    </td> 
+                    <td>
+                            <lightning-formatted-number value={countNum10_3} format-style="decimal" ></lightning-formatted-number>
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            >
+                            </lightning-input>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        総計
+                    </td>
+                    <td colspan="2">
+                        </td>
+                    <td>
+                        <p><lightning-formatted-number value={countNum11} format-style="decimal" ></lightning-formatted-number></p>
+                        <lightning-formatted-number value={countNum14} format-style="decimal" ></lightning-formatted-number>
+                    </td> 
+                    <td>
+                            <lightning-formatted-number value={countNum11_1} format-style="decimal" ></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-formatted-number value={countNum11_2} format-style="decimal" ></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-formatted-number value={countNum11_3} format-style="decimal" ></lightning-formatted-number>
+
+                    </td> 
+                    <td>
+                            <lightning-input type="text" 
+                            name="input40"
+                            variant='label-hidden'  
+                             
+                            class="zentaijigyoryo"
+                            >
+                            </lightning-input>
+                    </td> 
+                </tr>
+    
+            </tbody>
+        </table>
+</template>

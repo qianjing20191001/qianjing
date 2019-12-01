@@ -1,0 +1,287 @@
+<template>
+    <h1>2の付1</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2" class="headcenter">
+                        区分
+                    </th>
+                    <th colspan="2" class="headcenter">
+                        全体計画
+                    </th>
+                    <th colspan="2" class="headcenter">
+                        前年までの執行状況
+                    </th>
+                    <th colspan="3" class="headcenter">
+                        当該年度
+                    </th>
+                    <th colspan="2" class="headcenter">
+                        累計
+                    </th>
+                </tr>
+                 <tr>
+                    <th>
+                        事業量
+                    </th>
+                    <th>
+                        事業費
+                    </th>
+                    <th>
+                        事業量
+                    </th>
+                    <th>
+                        事業費
+                    </th>
+                    <th>
+                        事業量
+                    </th>
+                    <th>
+                        事業費
+                    </th>
+                    <th>
+                        国庫補助金
+                    </th>
+                    <th>
+                        事業量
+                    </th>
+                    <th>
+                        事業費
+                    </th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            森林環境保全直接支<br/>援事業
+                        </td>
+                        <td>
+                        <lightning-input type="number" 
+                                        value="10363"
+                                        variant='label-hidden'
+                                        name="countNum1_1" 
+                                        data-field-name="countNum1_1" 
+                                        onchange={handleCount1}>
+                        </lightning-input>
+                        </td>
+                        <td>
+                        <lightning-input type="number" 
+                                        value="10879795000"
+                                        variant='label-hidden'
+                                        name="countNum2_1" 
+                                        data-field-name="countNum2_1" 
+                                        onchange={handleCount2}>
+                        </lightning-input>
+                        </td>
+                        <td>
+                        <lightning-input type="number" 
+                                        value="8256"
+                                        variant='label-hidden'
+                                        name="countNum3_1" 
+                                        data-field-name="countNum3_1" 
+                                        onchange={handleCount3}>
+                        </lightning-input>
+                        </td>
+                        <td>
+                        <lightning-input type="number" 
+                                         value="7669594849"
+                                        variant='label-hidden'
+                                        name="countNum4_1" 
+                                        data-field-name="countNum4_1" 
+                                        onchange={handleCount4}>
+                        </lightning-input>
+                        </td>
+                        <td>
+                        <lightning-input type="number" 
+                                        value="1080"
+                                        variant='label-hidden'
+                                        name="countNum5_1" 
+                                        data-field-name="countNum5_1" 
+                                        onchange={handleCount5}>
+                        </lightning-input>
+                        </td>
+                        <td>
+                            <lightning-input type="number" 
+                                            value="1360000000"
+                                            variant='label-hidden'
+                                            name="countNum6_1" 
+                                            data-field-name="countNum6_1" 
+                                            onchange={handleCount6}>
+                            </lightning-input>
+                        </td>
+                        <td>
+                                <lightning-input type="number" 
+                                                value="408000000"
+                                                variant='label-hidden'
+                                                name="countNum7_1" 
+                                                data-field-name="countNum7_1" 
+                                                onchange={handleCount7}>
+                                </lightning-input>
+                                </td>
+                                <td>
+                                    <lightning-formatted-number value={countNum8_1} format-style="decimal" ></lightning-formatted-number>
+                                </td>
+                                <td>
+                                    <lightning-formatted-number value={countNum9_1} format-style="decimal" ></lightning-formatted-number>
+                                </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            公的森林整備
+                        </td>
+                        <td>
+                                <lightning-input type="number" 
+                                                value="7376"
+                                                variant='label-hidden'
+                                                name="countNum1_2" 
+                                                data-field-name="countNum1_2" 
+                                                onchange={handleCount1}>
+                                </lightning-input>
+                                </td>
+                                <td>
+                                <lightning-input type="number" 
+                                                value="3553903000"
+                                                variant='label-hidden'
+                                                name="countNum2_2" 
+                                                data-field-name="countNum2_2" 
+                                                onchange={handleCount2}>
+                                </lightning-input>
+                                </td>
+                                <td>
+                                <lightning-input type="number" 
+                                                value="3957"
+                                                variant='label-hidden'
+                                                name="countNum3_2" 
+                                                data-field-name="countNum3_2" 
+                                                onchange={handleCount3}>
+                                </lightning-input>
+                                </td>
+                                <td>
+                                <lightning-input type="number" 
+                                                value="2070570187"
+                                                variant='label-hidden'
+                                                name="countNum4_2" 
+                                                data-field-name="countNum4_2" 
+                                                onchange={handleCount4}>
+                                </lightning-input>
+                                </td>
+                                <td>
+                                <lightning-input type="number" 
+                                                value="385"
+                                                variant='label-hidden'
+                                                name="countNum5_2" 
+                                                data-field-name="countNum5_2" 
+                                                onchange={handleCount5}>
+                                </lightning-input>
+                                </td>
+                                <td>
+                                    <lightning-input type="number" 
+                                                value="120725389"   
+                                                variant='label-hidden'
+                                                name="countNum6_2" 
+                                                data-field-name="countNum6_2" 
+                                                onchange={handleCount6}>
+                                    </lightning-input>  
+                                </td>
+                                <td>
+                                    <lightning-input type="number" 
+                                                    value="36217617"  
+                                                    variant='label-hidden'
+                                                    name="countNum7_2" 
+                                                    data-field-name="countNum7_2" 
+                                                    onchange={handleCount7}>
+                                    </lightning-input>
+                                </td>
+                                <td>
+                                    <lightning-formatted-number value={countNum8_2} format-style="decimal" ></lightning-formatted-number>
+                                </td>
+                                <td>
+                                    <lightning-formatted-number value={countNum9_2} format-style="decimal" ></lightning-formatted-number>
+                                </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            合計
+                        </td>
+                        <td>
+                                <lightning-formatted-number value={countNum1} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum2} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum3} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum4} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum5} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum6} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum7} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum8} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum9} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="higaisirin">
+                            被害森林整備・保全<br/>松林緊急保護整備
+                        </td>
+                        <td colspan="2" rowspan="2">
+                                </td>
+                                <td colspan="2" rowspan="2">
+                                </td>
+                                <td>
+                                <lightning-input type="number" 
+                                                value="30"
+                                                variant='label-hidden'
+                                                name="countNum10_1" 
+                                                data-field-name="countNum10_1" 
+                                                onchange={handleCount5}>
+                                </lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input type="number" 
+                                                        value="79274611"
+                                                        variant='label-hidden'
+                                                        name="countNum11_1" 
+                                                        data-field-name="countNum11_1" 
+                                                        onchange={handleCount6}>
+                                        </lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input type="number" 
+                                                        value="23782383"
+                                                        variant='label-hidden'
+                                                        name="countNum12_1" 
+                                                        data-field-name="countNum12_1" 
+                                                        onchange={handleCount7}>
+                                        </lightning-input>
+                                </td>
+                                <td colspan="2" rowspan="2">
+                                 </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            総計
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum10} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum11} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                        <td>
+                                <lightning-formatted-number value={countNum12} format-style="decimal" ></lightning-formatted-number>
+                        </td> 
+                    </tr>
+                </tbody>
+        </table>
+    </template>

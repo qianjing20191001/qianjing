@@ -1,0 +1,117 @@
+<apex:page title="郵便番号検索について" standardStylesheets="true" >
+<style>
+#splash { margin: 0; padding: 0; width: 100%; } 
+#splash td { margin: 0; padding: 0; } 
+#splash #splashLeft { vertical-align: top; background-color: #F3F3EC; border-bottom: 2px solid #638658; } 
+#splash #splashCenter { display:block; width: 15px; background-color: #FFF; } 
+#splash #splashRight { vertical-align: top; background-color: #E8E8E8; border-bottom: 2px solid #999; } 
+#splash #splashLeft .about, #splash #splashLeft .exchange { width: 100%; } 
+#splash #splashRight .exchange p { font-size: 100%; color: #333; margin: 0 10px 12px 10px; line-height: 1.4em; } 
+#splash #splashLeft .about p { font-size: 100%; color: #333; margin: 20px 10px 20px 15px; line-height: 1.4em; } 
+#splash #splashLeft .about fieldset { color: #333; margin: 0 15px 10px 15px; padding: 2px; } 
+#splash #splashLeft .about fieldset ul { padding: 0; margin: .3em 0 .3em 2em; } 
+#splash #splashLeft .about fieldset li { padding: 0; margin: 0; } 
+#splash #splashLeft .about legend { font-size: 90%; color: #333; font-weight: bold; } 
+</style> 
+<apex:sectionHeader title="郵便番号検索について" />
+<div id="splash" style="cellspacing:0;"> 
+<div id="splashLeft" style=width:"100%">
+<div class="about">
+<!--アプリケーション概要-->
+<P style="padding-top:20px"><font color="#6699CC">●</font> アプリケーション概要</P>
+<P style="padding-bottom:20px">
+郵便番号を３桁以上入力すると該当する住所の一覧が表示されます。
+対象となる項目は標準の「郵便番号」項目です。数字３桁に続けて
+- の後に更に数字を入力するとリストを絞り込むことができます。
+オプションとして、都道府県を選択リストから選ぶようにもできます。                        
+</P>
+<P style="padding-bottom:20px">
+以下の2つの方法のいずれかで設定していただけます。
+</P>
+
+<!--設定方法-->
+<P><font color="#BFAF00">●</font> 設定方法 1 （ホームページのリンク カスタムコンポーネント）</P>
+<P>郵便番号検索起動リンクを Salesforce のサイドバーに表示する方法です。<br/>
+サイドバーが常に表示される設定とする必要があります。</P>
+<ol style="padding-bottom:20px">
+<!--設定方法1-->
+<li>使用するカスタムリンクを選択します<br/>
+<font color="#638658">【手順】</font><br/>
+［設定］ → ［カスタマイズ］ → ［ホーム］ → ［ホームページのコンポーネント］<br/>
+「カスタムコンポーネント」の「郵便番号検索 © SunBridge」の「編集」をクリックします。<br/>
+「表示されるカスタムリンク」の中から使用するものを１つ選び、それ<strong>以外</strong>を「◀︎削除」ボタンにより「表示されないカスタムリンク」に移動します。各リンクの説明は下の表を参照してください。<br/>
+「保存」ボタンで変更を保存します。<br/>
+<!--設定方法3-->
+<li>リンク カスタムコンポーネントをサイドバーに追加します<br/>
+<font color="#638658">【手順】</font><br/>
+［設定］ → ［カスタマイズ］ → ［ホーム］ → ［ホームページのページレイアウト］<br/>
+郵便番号検索を利用するプロファイルに割り当てられたページレイアウトの「編集」をクリックします。<br/>
+「表示する狭いコンポーネントの選択」セクションの「郵便番号検索 © SunBridge」にチェックを入れて「次へ」ボタンを押します。<br/>
+「狭い（左）列」の並び順を適宜変更して「保存」ボタンを押します。<br/>
+<!--設定方法3-->
+<li>サイドバーを常時表示するよう設定します<br/>
+<font color="#638658">【手順】</font><br/>
+［設定］ → ［カスタマイズ］ → ［ユーザインタフェース］<br/>
+サイドバーセクション内の 「すべてのページにカスタムサイドバーコンポーネントを表示」 にチェックを入れて「保存」ボタンを押します。<br/>
+</li>
+</ol>
+
+    <table border="1">
+      <tr><th>名前</th><th>都道府県</th><th>郵便番号のハイフン</th><th>国</th></tr>
+
+      <tr><td>sfzip</td><td>プルダウン</td><td>表示</td><td>非表示</td></tr>
+      <tr><td>sfzip_rawState</td><td>テキストボックス</td><td>表示</td><td>非表示</td></tr>
+      <tr><td>sfzip_addState</td><td>テキストボックス+プルダウン</td><td>表示</td><td>非表示</td></tr>
+      <tr><td>sfzip_enableCountry</td><td>プルダウン</td><td>表示</td><td>表示</td></tr>
+      <tr><td>sfzip_removeHyphen</td><td>プルダウン</td><td>非表示</td><td>非表示</td></tr>
+      <tr><td>sfzip_addState_enableCountry</td><td>テキストボックス+プルダウン</td><td>表示</td><td>表示</td></tr>
+      <tr><td>sfzip_addState_removeHyphen</td><td>テキストボックス+プルダウン</td><td>非表示</td><td>非表示</td></tr>
+    </table>
+
+<!--設定方法-->
+<P><font color="#BFAF00">●</font> 設定方法 2 （ブックマークレット）</P>
+<P>個々のユーザ様が郵便番号検索起動リンクをブラウザのブックマーク（お気に入り）に登録する方法です。<br/>
+サイドバーが常に表示されている必要はありません。</P>
+<ol style="padding-bottom:20px">
+<!--設定方法1-->
+<li>個々のユーザ様毎に下表のリンクのいずれかをブックマーク（お気に入り）バーにドラッグ＆ドロップします。</li>
+</ol>
+
+    <table border="1">
+      <tr><th>リンク</th><th>都道府県</th><th>郵便番号のハイフン</th><th>国</th></tr>
+
+      <tr><td><a href="javascript:(function() {var scriptElement = document.createElement('script');scriptElement.setAttribute('type', 'text/javascript');scriptElement.setAttribute('src','https://sfzip.sunbridge.com/free/zip.js');document.body.appendChild(scriptElement);})()">郵便番号検索</a></td><td>プルダウン</td><td>表示</td><td>非表示</td></tr>
+      <tr><td><a href="javascript:(function() {var scriptElement = document.createElement('script');scriptElement.setAttribute('type', 'text/javascript');scriptElement.setAttribute('src','https://sfzip.sunbridge.com/free/zip.js?rawState');document.body.appendChild(scriptElement);})()">郵便番号検索</a></td><td>テキストボックス</td><td>表示</td><td>非表示</td></tr>
+      <tr><td><a href="javascript:(function() {var scriptElement = document.createElement('script');scriptElement.setAttribute('type', 'text/javascript');scriptElement.setAttribute('src','https://sfzip.sunbridge.com/free/zip.js?addState');document.body.appendChild(scriptElement);})()">郵便番号検索</a></td><td>テキストボックス+プルダウン</td><td>表示</td><td>非表示</td></tr>
+      <tr><td><a href="javascript:(function() {var scriptElement = document.createElement('script');scriptElement.setAttribute('type', 'text/javascript');scriptElement.setAttribute('src','https://sfzip.sunbridge.com/free/zip.js?enableCountry');document.body.appendChild(scriptElement);})()">郵便番号検索</a></td><td>プルダウン</td><td>表示</td><td>表示</td></tr>
+      <tr><td><a href="javascript:(function() {var scriptElement = document.createElement('script');scriptElement.setAttribute('type', 'text/javascript');scriptElement.setAttribute('src','https://sfzip.sunbridge.com/free/zip.js?removeHyphen');document.body.appendChild(scriptElement);})()">郵便番号検索</a></td><td>プルダウン</td><td>非表示</td><td>非表示</td></tr>
+      <tr><td><a href="javascript:(function() {var scriptElement = document.createElement('script');scriptElement.setAttribute('type', 'text/javascript');scriptElement.setAttribute('src','https://sfzip.sunbridge.com/free/zip.js?addState&enableCountry');document.body.appendChild(scriptElement);})()">郵便番号検索</a></td><td>テキストボックス+プルダウン</td><td>表示</td><td>表示</td></tr>
+
+    </table>
+
+<!--使用方法-->
+<P><font color="#BFAF00">●</font> 使用方法</P>
+<P>標準の住所項目があるオブジェクト（取引先、取引先責任者、リード）の編集画面でサイドバーの郵便番号検索リンクもしくはブックマーク（お気に入り）バーのブックマークレットをクリックすると郵便番号検索機能が有効化されます。<br/>
+郵便番号検索機能の有効化は、ページを表示する度に必要となります</P>
+
+<!--注意-->
+<P><font color="#3D8D8D">●</font>注意</P>
+<ul style="padding-bottom:20px; line-height: 1.4em;">
+<li>郵便番号データの更新は月１回程度行います</li>
+<li>システムのメンテナンス等によりご利用になれない場合があります<br/>
+その場合は各住所項目に手動で入力してください</li>
+<li>Internet Expoloer で Google Toolbar 2.0 以降をインストールすると動作しない場合があります
+<li>下記URLから登録していただきますと、バージョンアップ、システムメンテナンス等の情報をお送りいたします<br/>
+是非ご登録ください<br/>
+<a href="https://info.sunbridge.com/WEB-support-ZIP-reg.html">https://info.sunbridge.com/WEB-support-ZIP-reg.html</a>
+</ul>
+
+<!--お問い合わせ先-->
+<fieldset> 
+<legend>お問い合わせ先</legend> 
+<p>株式会社サンブリッジ　　<a href="mailto:sfdczip@sunbridge.com">sfdczip@sunbridge.com</a></p> 
+</fieldset> 
+</div> 
+</div>
+</div>
+</apex:page>

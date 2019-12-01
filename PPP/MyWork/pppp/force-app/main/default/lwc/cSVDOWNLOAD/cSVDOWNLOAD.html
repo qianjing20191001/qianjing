@@ -1,0 +1,153 @@
+<template>
+  <lightning-card title="Custom Search Functionality in LWC"> 
+        <div if:true={error} style="margin-left: 3%;">
+                <p style="color: red;">{error}</p>
+            </div>
+      <lightning-layout multiple-rows="true" vertical-align="end">
+        <lightning-layout-item
+          size="12"
+          small-device-size="10"
+          medium-device-size="8"
+          large-device-size="6"
+          padding="around-small"
+        >
+          <div class="slds-form-element">
+            <div class="slds-form-element__control">
+              <lightning-input            
+                type="text"
+                label="申請年度"    
+                onchange={handleSearchNedo}
+              ></lightning-input>
+            </div>
+          </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item
+          size="12"
+          small-device-size="10"
+          medium-device-size="8"
+          large-device-size="6"
+          padding="around-small"
+        >
+          <div class="slds-form-element">
+            <div class="slds-form-element__control">
+              <lightning-input
+                type="text"
+                label="都道府県コード"
+                value={strSearchTodofukei}
+                onchange={handleSearchTodofukei}
+              ></lightning-input>
+            </div>
+          </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item
+          size="12"
+          small-device-size="10"
+          medium-device-size="8"
+          large-device-size="6"
+          padding="around-small"
+        >
+          <div class="slds-form-element">
+            <div class="slds-form-element__control">
+              <lightning-input
+                type="text"
+                label="域協議会コード"
+                value={strSearchChiiki}
+                onchange={handleSearchChiiki}
+              ></lightning-input>
+            </div>
+          </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item
+          size="12"
+          small-device-size="10"
+          medium-device-size="8"
+          large-device-size="6"
+          padding="around-small"
+        >
+          <div class="slds-form-element">
+            <div class="slds-form-element__control">
+              <lightning-input
+                type="text"
+                label="地域協議会等管理コード"
+                value={strSearchChiikiKanri}
+                onchange={handleSearchChiikiKanri}
+              ></lightning-input>
+            </div>
+          </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item
+          size="12"
+          small-device-size="10"
+          medium-device-size="8"
+          large-device-size="6"
+          padding="around-small"
+        >
+          <div class="slds-form-element">
+            <div class="slds-form-element__control">
+              <lightning-input
+                type="text"
+                label="共済組合コード"
+                value={strSearchkaiSaikumi}
+                onchange={handleSearchkaiSaikumi}
+              ></lightning-input>
+            </div>
+          </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item
+          size="12"
+          small-device-size="10"
+          medium-device-size="8"
+          large-device-size="6"
+          padding="around-small"
+        >
+          <div class="slds-form-element">
+            <div class="slds-form-element__control">
+              <lightning-input
+                type="text"
+                label="農業者名(漢字)"
+                value={strSearchNogyouSya}
+                onchange={handleSearchNogyouSya}
+              ></lightning-input>
+            </div>
+          </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="2" medium-device-size="2" large-device-size="2" padding="around-small">
+                <lightning-button label="Search" 
+                                  variant="brand" 
+                                  onclick={handleSearch}></lightning-button>
+            </lightning-layout-item>
+    </lightning-layout>
+    <div if:true={searchData1}>
+            <lightning-datatable data={searchData1} 
+                                 columns={columns} 
+                                 key-field="id"
+                                 hide-checkbox-column="true"></lightning-datatable>
+        </div>
+  </lightning-card>
+
+  <lightning-card title="詳細情報">
+        <div class="slds-m-around_medium">
+                <!-- Datatable component -->
+                    <lightning-datatable columns={columns} 
+                                         data={searchData} 
+                                         hide-checkbox-column="true"
+                                         key-field="id"></lightning-datatable>
+            
+            </div>
+            <div class="slds-p-around_medium lgc-bg-inverse">
+                <p>Do you want download data as a CSV format, Click Here &nbsp;
+                    <lightning-button icon-name="utility:download" 
+                                      label="Download as CSV" 
+                                      title="Download CSV File"
+                                      onclick={downloadCSVFile} variant="brand"></lightning-button>
+                </p>
+            </div>
+          
+        
+    </lightning-card>
+</template>

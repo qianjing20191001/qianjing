@@ -1,0 +1,47 @@
+<template>
+        <div class="slds-form">
+            <div class="slds-form-element slds-form-element_horizontal">
+                <label class="slds-form-element__label" for="horizontal-input-id-01">申請年度</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="horizontal-input-id-01" placeholder="" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element slds-form-element_horizontal">
+                <label class="slds-form-element__label" for="horizontal-input-id-01">都道府県コード</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="horizontal-input-id-02" placeholder="" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element slds-form-element_horizontal">
+                <label class="slds-form-element__label" for="horizontal-input-id-01">域協議会コード</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="horizontal-input-id-03" placeholder="" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element slds-form-element_horizontal">
+                <label class="slds-form-element__label" for="horizontal-input-id-01">地域協議会等管理コード</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="horizontal-input-id-04" placeholder="" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element slds-form-element_horizontal">
+                <label class="slds-form-element__label" for="horizontal-input-id-01">共済組合コード</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="horizontal-input-id-05" placeholder="" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element slds-form-element_horizontal">
+                <label class="slds-form-element__label" for="horizontal-input-id-01">農業者名(漢字)</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="horizontal-input-id-06" placeholder="" class="slds-input" />
+                </div>
+            </div>
+        </div>
+
+        <button class="slds-button slds-button_brand">CSVダウンロード</button>
+     
+        <a target="_self" class="slds-button" download="ExportToCSV.csv" href={hrefdata} onclick={exportToCSV}
+            style="margin-left: 80%;">Download Excel</a>
+        <lightning-datatable data={contactList} columns={contactColumns} key-field="id" hide-checkbox-column="true">
+        </lightning-datatable>
+    </template>

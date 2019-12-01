@@ -1,0 +1,46 @@
+<template>
+        
+    <ul>
+       <div class="slds-p-bottom_small">
+        <div class="slds-grid slds-size_2-of-2 smallsize" >    
+            <div class="slds-size_9-of-12 slds-p-right_x-small">
+                    <lightning-combobox onchange={handleDeSakiKikanChange} value={desakikikann} label="出先機関" placeholder=""
+                    options={desakikikannOptions} required>
+                    </lightning-combobox>
+            </div>
+
+            <div class="slds-size_4-of-12 slds-p-horizontal_x-small">
+                    <lightning-combobox onchange={handleJigyokubunnChange} value={jigyokubunn} label="事業区分" placeholder=""
+                    options={jigyokubunnOptions} required>
+                    </lightning-combobox>
+            </div>
+
+            <div class="slds-size_3-of-12 slds-p-horizontal_x-small">
+                <lightning-combobox onchange={handleKubunnChange} value={Kubunn} label="区分" placeholder=""
+                options={KubunnOptions} required>
+                </lightning-combobox>
+             </div>
+    </div>
+    </div>
+  
+   
+
+    </ul>
+
+    <ul>
+
+           
+
+        <template iterator:it={contacts}>
+            <li key={it.value.Id}>
+                <div if:true={it.first} class="list-first"></div>
+                {it.value.Name},{it.value.Title}
+                <div if:true={it.last} class="list-last"></div>
+            </li>
+            
+
+        </template>
+
+    </ul>
+    
+</template>

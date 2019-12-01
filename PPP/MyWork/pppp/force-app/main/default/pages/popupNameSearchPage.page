@@ -1,0 +1,71 @@
+<apex:page controller="PopupNameSearchController" showHeader="false" sidebar="false" tabStyle="Account" id="page">
+    <body class="lookupTab">
+        <apex:form id="form" >
+            <div class="lookup">
+                <div class="bPageTitle">
+                    <div class="ptBody secondaryPalette">
+                        <div class="content">
+                            <img src="/s.gif" alt="" class="pageTitleIcon" title=""/>
+                            <h1>
+                                <apex:outputText value="検索" />
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="pBody">
+                    <label for="lksrch">
+                        <apex:outputText value="検索" />
+                    </label>
+                    <apex:inputText value="{!account.Name}" maxlength="80" size="20" />
+                    <apex:commandButton value=" Go! " title=" Go! " action="{!doSearch}" reRender="form" />
+                    <div class="bDescription">
+                        <apex:outputText value="他の文字の横にワイルドカード「*」を使用してより高度な検索をすることができます。" />
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <apex:commandButton value="New" 
+              action="{!getAccountName}" onComplete="popupWindowClose('{!JSENCODE(account.Name)}')" reRender="from"/>
+            <br/>
+            <div class="srch">
+                <apex:outputText value="検索結果" />
+            </div>
+            <div class="listRelatedObject lookupBlock">
+                <div class="bPageBlock secondaryPalette" >
+                    <div class="pbBody">
+                        <table class="list" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr class="headerRow">
+                                    <td scope="col">
+                                        <apex:outputText value="{!$ObjectType.Account.Fields.Name.Label}" />
+                                    </td>
+                                </tr>
+                                <apex:repeat value="{!accounts}" var="lists" id="theRepeat">
+                                    <tr class="dataRow">
+                                        <td scope="col">
+                                            <apex:outputLink onClick="popupWindowClose('{!JSENCODE(lists.Name)}')">
+                                                <apex:outputField value="{!lists.Name}" />
+                                            </apex:outputLink>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <apex:outputText value="Copyright c 2000-2012 salesforce.com, inc. All rights reserved." />
+            </div>
+        </apex:form>
+        <script>
+            beenFocused = true;
+            
+            function popupWindowClose(prmName) {
+                window.opener.document.getElementById('page:form:block:section:sectionItem:accountName').value = prmName;
+                window.close();
+                return false;
+            }
+        </script>
+    </body>
+</apex:page>

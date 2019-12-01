@@ -1,0 +1,163 @@
+<template>
+        <div style="background-color: white;">
+                <h2>
+                        <div class="shunyuu">
+                                (1)収入
+                        </div>
+                        <div class="tanni">
+                                単位:円<span>&nbsp;&nbsp;</span>
+                        </div>
+                </h2>
+                <table border="2">
+                        <thead class="headColor">
+                                <tr>
+                                        <th colspan="3" style="width:45%;">
+                                                予算額
+                                        </th>
+                                        <th rowspan="2" style="width:15%;">
+                                                精算額
+                                        </th>
+                                        <th rowspan="2">
+                                                差引増△減額
+                                        </th>
+                                        <th rowspan="2" class="width15Percent">
+                                                備考
+                                        </th>
+                                </tr>
+                                <tr>
+                                        <th>国庫補助金</th>
+                                        <th>県(都道府)負担金</th>
+                                        <th>計</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <!--Row1-->
+                                <tr>
+                                        <td>
+                                                <p>
+                                                        <lightning-formatted-number value={countNum11}
+                                                                format-style="decimal">
+                                                        </lightning-formatted-number>
+                                                </p>
+                                        </td>
+                                        <td>
+                                                <p>
+                                                        <lightning-formatted-number value={countNum12}
+                                                                format-style="decimal">
+                                                        </lightning-formatted-number>
+                                                </p>
+                                        </td>
+                                        <td>
+                                                <p>
+                                                        <lightning-formatted-number value={countNum13}
+                                                                format-style="decimal">
+                                                        </lightning-formatted-number>
+                                                </p>
+                                        </td>
+                                        <td>
+                                                <p>
+                                                        <lightning-formatted-number value={countNum14}
+                                                                format-style="decimal">
+                                                        </lightning-formatted-number>
+                                                </p>
+                                        </td>
+                                        <td>
+                                                <div style="display: flex;">
+                                                        <lightning-formatted-text class="sannkakuMargin" value={fugou1}>
+                                                        </lightning-formatted-text>
+                                                        <div class="sannkakuSuziRight">
+                                                                <lightning-formatted-number value={countNum15}
+                                                                        format-style="decimal">
+                                                                </lightning-formatted-number>              
+                                                        </div>
+                                                </div>
+                                        </td>
+                                        <!--備考-->
+                                        <td rowspan="3">
+                                                <textarea name="biko" class="bikostyle"></textarea>
+                                        </td>
+                                </tr>
+                                <!--Row2-->
+                                <!-- inputXX 命名規則 XX:[行数][列数]-->
+                                <tr>
+                                        <td>
+                                                <lightning-input value="459962000" data-field-name="countNum2_1"
+                                                        onchange={handleCount21} type="number" name="input21"
+                                                        variant='label-hidden' label="Enter a decimal value">
+                                                </lightning-input>
+                                        </td>
+                                        <td>
+                                                <lightning-input value="212413000" data-field-name="countNum2_2"
+                                                        onchange={handleCount22} type="number" name="input22"
+                                                        variant='label-hidden' label="Enter a decimal value">
+                                                </lightning-input>
+                                        </td>
+                                        <td>
+                                                <p>
+                                                        <lightning-formatted-number value={countNum23}
+                                                                format-style="decimal">
+                                                        </lightning-formatted-number>
+                                                </p>
+                                        </td>
+                                        <td>
+                                                <lightning-input value="674904600" data-field-name="countNum2_4"
+                                                        onchange={handleCount24} type="number" name="input24"
+                                                        variant='label-hidden' label="Enter a decimal value">
+                                                </lightning-input>
+                                        </td>
+                                        <td>
+                                                <div style="display: flex;">
+                                                        <lightning-formatted-text class="sannkakuMargin" value={fugou2}>
+                                                        </lightning-formatted-text>
+                                                        <div class="sannkakuSuziRight">
+                                                                <lightning-formatted-number value={countNum25}
+                                                                        format-style="decimal">
+                                                                </lightning-formatted-number>
+                                                        </div>
+                                                </div>
+                                        </td>
+                                </tr>
+                                <!--Row3-->
+                                <!-- inputXX 命名規則 XX:[行数][列数]-->
+                                <tr>
+                                        <td>
+                                                <lightning-input value="65924000" data-field-name="countNum3_1"
+                                                        onchange={handleCount31} type="number" name="input31"
+                                                        variant='label-hidden' label="Enter a decimal value">
+                                                </lightning-input>
+                                        </td>
+                                        <td>
+                                                <lightning-input value="25698000" data-field-name="countNum3_2"
+                                                        onchange={handleCount32} type="number" name="input32"
+                                                        variant='label-hidden' label="Enter a decimal value">
+                                                </lightning-input>
+                                        </td>
+                                        <td>
+                                                <p class="height32 ">
+                                                        <lightning-formatted-number value={countNum33}
+                                                                format-style="decimal">
+                                                        </lightning-formatted-number>
+                                                </p>
+                                        </td>
+                                        <td>
+                                                <lightning-input value="91622000" data-field-name="countNum3_4"
+                                                        onchange={handleCount34} type="number" name="input34"
+                                                        variant='label-hidden' label="Enter a decimal value">
+                                                </lightning-input>
+                                        </td>
+                                        <td>
+                                                <div style="display: flex;">
+                                                        <lightning-formatted-text class="sannkakuMargin" value={fugou3}>
+                                                        </lightning-formatted-text>
+                                                        <div class="sannkakuSuziRight">
+                                                                <lightning-formatted-number value={countNum35}
+                                                                        format-style="decimal">
+                                                                </lightning-formatted-number>
+                                                        </div>
+                                                </div>
+                                        </td>
+                                </tr>
+                        </tbody>
+                </table>
+        </div>
+</template>

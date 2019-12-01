@@ -1,0 +1,66 @@
+table{
+    background-color: white; 
+}
+.center{ 
+    display: flex;
+}
+.right{
+    font-size: 20px;
+}
+.subheadsize{
+    font-size: 20px;   
+}
+.aligncenter{
+    text-align:center;
+}
+
+.topborderhidden{
+    border-top-style: hidden;
+}
+
+.borderbottomhidden{
+    border-bottom-style: hidden;
+}
+
+.ichi{
+    vertical-align:bottom;  
+}
+.tableSep{
+    border-collapse: separate;
+}
+
+.sitasen{
+    border-bottom-style: hidden;
+}
+.bordernone{
+    border-top-style: hidden;
+    border-bottom-style: hidden;
+}
+.fontsize{
+    font-size: 20px;
+}
+.fontaligncenter{
+    text-align: center;
+}
+
+.sameLevel{
+    display: flex;
+}
+.leftTable{
+    width: 50%;
+    text-align: end;
+    
+}
+.rightTable{
+    width: 50%;
+}
+.xiaobiaoti{
+    font-size:25px; 
+    text-align: end;
+}
+.diaochabiao{
+    display: flex; margin-left:20%;
+}
+.kurikosi{
+   display: flex; margin-left:20%;
+}

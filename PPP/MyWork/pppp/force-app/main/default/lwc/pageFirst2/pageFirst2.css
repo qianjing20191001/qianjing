@@ -1,0 +1,189 @@
+.sinsei{
+    display: flex;
+}
+.sinseimoto{
+    width: 203px;
+    margin-left: 10px;
+}
+.kihyouhi{
+    margin-left: 10px;
+}
+
+.sinseinedo{
+    margin-left: 200px;
+}
+.input1{
+    margin-left: 25px;
+    float: left;
+    padding-top: 7px
+}
+.nendo{
+    margin-top:37px;
+    margin-left: 10px;
+}
+.yyyy{
+    display: flex;
+    width: 300px;
+    
+}
+.yyyymmdd{
+    margin-top:37px;
+    margin-left: 10px;
+}
+.table1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.btngroup{
+    float: right;
+}
+.footer{
+    border-top: 2px solid #d4d4d4;
+    background-color: #ffffff;
+    padding: .75rem 1rem;
+}
+.subtable2{
+    margin-top: 20px;
+}
+table{
+    background: white;
+}
+th,td{
+    text-align: center;
+}
+.zentai{
+    text-align: left;
+    width: 150px;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+}
+.kubun{
+    width: 110px;
+}
+input{
+    overflow: hidden;
+    margin-top:-1px;
+    margin-bottom:-1px;
+    width: 100%;
+ } 
+.zentaijigyoryo{
+    overflow: hidden;
+    width: 100%;
+}
+.zentaijigyoryo1{
+    overflow: hidden;
+    width: 100%;
+}
+.zentaijigyoryo2{
+    overflow: hidden;
+    width: 100%;
+    border-bottom-width: 1px;;
+}
+.utiken{
+    width: 120px;
+}
+.huanhang{
+    display: flex;
+}
+.ha{
+    margin-left: 3px; 
+}
+.textleft{
+    text-align: left;
+}
+/*2.森林環境保全整備事業(林道専用道整備を除く)*/
+.sinsei{
+    display: flex;
+}
+.sinseimoto{
+    width: 203px;
+    margin-left: 10px;
+}
+.kihyouhi{
+    margin-left: 10px;
+}
+
+.sinseinedo{
+    margin-left: 200px;
+}
+.input1{
+    margin-left: 25px;
+    float: left;
+    padding-top: 7px
+}
+.nendo{
+    margin-top:37px;
+    margin-left: 10px;
+}
+.yyyy{
+    display: flex;
+    width: 300px;
+    
+}
+.yyyymmdd{
+    margin-top:37px;
+    margin-left: 10px;
+}
+.table1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.btngroup{
+    float: right;
+}
+.footer{
+    border-top: 2px solid #d4d4d4;
+    background-color: #ffffff;
+    padding: .75rem 1rem;
+}
+.subtable2{
+    margin-top: 20px;
+}
+table{
+    background: white;
+}
+th,td{
+    text-align: center;
+}
+.zentai{
+    text-align: left;
+    width: 150px;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+}
+.kubun{
+    width: 110px;
+}
+input{
+    overflow: hidden;
+    margin-top:-1px;
+    margin-bottom:-1px;
+    width: 100%;
+ } 
+.zentaijigyoryo{
+    overflow: hidden;
+    width: 100%;
+}
+.zentaijigyoryo1{
+    overflow: hidden;
+    width: 100%;
+}
+.zentaijigyoryo2{
+    overflow: hidden;
+    width: 100%;
+    border-bottom-width: 1px;;
+}
+.utiken{
+    width: 120px;
+}
+.huanhang{
+    display: flex;
+}
+.ha{
+    margin-left: 3px; 
+}
+.textleft{
+    text-align: left;
+}

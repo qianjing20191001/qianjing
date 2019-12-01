@@ -1,0 +1,143 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/bikeCard": [
+                "bikeCard/bikeCard.js"
+            ],
+            "c/button": [
+                "button/button.js"
+            ],
+            "c/compositionBasics": [
+                "compositionBasics/compositionBasics.js"
+            ],
+            "c/contactTile": [
+                "contactTile/contactTile.js"
+            ],
+            "c/detail": [
+                "detail/detail.js"
+            ],
+            "c/forest": [
+                "forest/forest.js"
+            ],
+            "c/helloBinding": [
+                "helloBinding/helloBinding.js"
+            ],
+            "c/helloConditionalRendering": [
+                "helloConditionalRendering/helloConditionalRendering.js"
+            ],
+            "c/helloForEach": [
+                "helloForEach/helloForEach.js"
+            ],
+            "c/helloIterator": [
+                "helloIterator/helloIterator.js"
+            ],
+            "c/helloWorld": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/hojyokin": [
+                "hojyokin/hojyokin.js"
+            ],
+            "c/hojyokinthosyo": [
+                "hojyokinthosyo/hojyokinthosyo.js"
+            ],
+            "c/jikouchiwake": [
+                "jikouchiwake/jikouchiwake.js"
+            ],
+            "c/lWCCurrentUserIdDemo": [
+                "lWCCurrentUserIdDemo/lWCCurrentUserIdDemo.js"
+            ],
+            "c/nitukiitti": [
+                "nitukiitti/nitukiitti.js"
+            ],
+            "c/nitukini": [
+                "nitukini/nitukini.js"
+            ],
+            "c/oOKATABIHI": [
+                "oOKATABIHI/oOKATABIHI.js"
+            ],
+            "c/pageFirst2": [
+                "pageFirst2/pageFirst2.js"
+            ],
+            "c/propertyName": [
+                "propertyName/propertyName.js"
+            ],
+            "c/sentakurisuto": [
+                "sentakurisuto/sentakurisuto.js"
+            ],
+            "c/sinnriKannkyouHozenn": [
+                "sinnriKannkyouHozenn/sinnriKannkyouHozenn.js"
+            ],
+            "c/sinnriKannkyuSyusiTitle": [
+                "sinnriKannkyuSyusiTitle/sinnriKannkyuSyusiTitle.js"
+            ],
+            "c/sinnriKannkyuSyusiTitleN": [
+                "sinnriKannkyuSyusiTitleN/sinnriKannkyuSyusiTitleN.js"
+            ],
+            "c/sinnrinnKannkyoSisyutuSeisann": [
+                "sinnrinnKannkyoSisyutuSeisann/sinnrinnKannkyoSisyutuSeisann.js"
+            ],
+            "c/sinnrinnKannkyoSisyutuSeisannN": [
+                "sinnrinnKannkyoSisyutuSeisannN/sinnrinnKannkyoSisyutuSeisannN.js"
+            ],
+            "c/sinnrinnKannkyoSyuunyuuSeisann": [
+                "sinnrinnKannkyoSyuunyuuSeisann/sinnrinnKannkyoSyuunyuuSeisann.js"
+            ],
+            "c/sinnrinnKannkyoSyuunyuuSeisannN": [
+                "sinnrinnKannkyoSyuunyuuSeisannN/sinnrinnKannkyoSyuunyuuSeisannN.js"
+            ],
+            "c/sinnrinnSeibiJigyoRinndou": [
+                "sinnrinnSeibiJigyoRinndou/sinnrinnSeibiJigyoRinndou.js"
+            ],
+            "c/sinrinseibi": [
+                "sinrinseibi/sinrinseibi.js"
+            ],
+            "c/sirinnNavigate": [
+                "sirinnNavigate/sirinnNavigate.js"
+            ],
+            "c/syakaiHokennKanyuuJittai": [
+                "syakaiHokennKanyuuJittai/syakaiHokennKanyuuJittai.js"
+            ],
+            "c/test": [
+                "test/test.js"
+            ],
+            "c/testApexSearch": [
+                "testApexSearch/testApexSearch.js"
+            ],
+            "c/todoApp": [
+                "todoApp/todoApp.js"
+            ],
+            "c/todoItem": [
+                "todoItem/todoItem.js"
+            ],
+            "c/jquery.mobile-1.4.5": [
+                "../staticresources/jQueryMobile/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"
+            ],
+            "c/cSVEXPORT": [
+                "cSVEXPORT/cSVEXPORT.js"
+            ],
+            "c/cSVDOWNLOAD": [
+                "cSVDOWNLOAD/cSVDOWNLOAD.js"
+            ],
+            "c/testLwcCommon": [
+                "testLwcCommon/testLwcCommon.js"
+            ],
+            "c/exportToExcelDemo": [
+                "exportToExcelDemo/exportToExcelDemo.js"
+            ],
+            "c/lwcSearchFun": [
+                "lwcSearchFun/lwcSearchFun.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

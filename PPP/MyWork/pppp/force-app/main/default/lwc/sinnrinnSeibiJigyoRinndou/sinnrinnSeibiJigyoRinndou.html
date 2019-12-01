@@ -1,0 +1,1060 @@
+<template>
+        <div style="background-color: white;">
+        <h1>
+                <div class="headnav">平成28年度指導監督費項目別内訳表</div>
+        </h1>
+        <div>
+                <div class="rinndou">
+                        徳島県　森林整備事業(林道事業)
+                </div>
+                <div class="tanni">
+                        （単位:円）
+                </div>
+        </div>
+        <table border="2">
+                <thead class="headColor">
+                        <tr>
+                                <th rowspan="2" class="theadAligncenter">
+                                        項&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目
+                                </th>
+                                <th rowspan="2" class="theadAligncenter">
+                                        事業費
+                                </th>
+                                <th colspan="2" class="theadAligncenter">
+                                        指導監督費
+                                </th>
+                                <th class="theadAligncenter">
+                                        指導監督費協議額のうち<br />
+                                        国庫金相当額(うち食糧費)
+                                </th>
+                        </tr>
+                        <tr>
+                                <th class="theadAligncenter">
+                                        協議額
+                                </th>
+                                <th class="theadAligncenter">
+                                        精算額
+                                </th>
+                                <th class="theadAligncenter">
+                                        指導監督費
+                                </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        <!-- (項)地方創生基盤整備事業推進費 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row1-->
+                        <tr>
+                                <td>
+                                        (項)地方創生基盤整備事業推進費
+                                </td>
+                                <td class="numberRightAlign ">
+                                        <p class="height32">
+                                                <lightning-formatted-number value={countNum1} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p class="height32">
+                                                <lightning-formatted-number value={countNum2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p class="height32">
+                                                <lightning-formatted-number value={countNum3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p class="height32">
+                                                <lightning-formatted-number value={countNum4} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!--Row2-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum1_11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum2_11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum3_11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum4_11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!--Row3-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum1_10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum2_10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum3_10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum4_10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目)地方創生整備推進交付金 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!-- 命名規則 :①[列数][行数] ; ②　ROW4は第9計算行として計算する -->
+                        <!--Row4-->
+                        <tr>
+                                <td>
+                                        <span>&nbsp;&nbsp;&NonBreakingSpace;&NonBreakingSpace;</span> (目)地方創生整備推進交付金
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum1_9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum2_9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum3_9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum4_9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+
+
+                        <!-- (目)地方創生整備推進交付金 -->
+                        <!--Row5-->
+                        <!-- 命名規則 :①[列数][行数] ; ②　ROW5は第8計算行として計算する -->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum1_8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum2_8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum3_8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum4_8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目)地方創生整備推進交付金 -->
+                        <!--Row6 -->
+                        <!-- 命名規則 :①[列数][行数] ; ②　ROW6は第7計算行として計算する -->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum1_7} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum2_7} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum3_7} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum4_7} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細)地方創生道整備推進交付金 -->
+                        <!-- 命名規則 :①[列数][行数] ; ②　ROW7は第6計算行として計算する -->
+                        <!--Row7-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(目細)地方創生道整備推進交付金 </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum1_6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum2_6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum3_6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum4_6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細))地方創生道整備推進交付金 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!-- 命名規則 :①[列数][行数] ; ②　ROW8は第5計算行として計算する -->
+                        <!--Row8-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <lightning-input data-field-name="countNum1_5" onchange={handleCount1} value="407855000" type="number" name="input81"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum2_5" onchange={handleCount2} value="0" type="number" name="input82" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum3_5" onchange={handleCount3} value="0" type="number" name="input83" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td> 
+                                <td>
+                                        <lightning-input data-field-name="countNum4_5" onchange={handleCount4} value="0" type="number" name="input84" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!-- (目細))地方創生道整備推進交付金 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!-- 命名規則 :①[列数][行数] ; ②　ROW9は第4計算行として計算する -->
+                        <!--Row9-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <lightning-input data-field-name="countNum1_4" onchange={handleCount1}
+                                                value="435062000" type="number" name="input91" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum2_4" onchange={handleCount2} value="0"
+                                                type="number" name="input92" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum3_4" onchange={handleCount3} value="0"
+                                                type="number" name="input93" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum4_4" onchange={handleCount4} value="0" type="number" name="input94" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!-- (目細)指導監督交付金 -->
+                        <!-- 命名規則 :①[列数][行数] ; ②　ROW10は第3計算行として計算する -->
+                        <!--Row10-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(目細)指導監督交付金</td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum1_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum2_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum3_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum4_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細))指導監督交付金 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!-- data-field-name 命名規則 :①[列数][行数] ; ②　ROW11は第2計算行として計算する -->
+                        <!--Row11-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <lightning-input data-field-name="countNum1_2" onchange={handleCount1}
+                                                value="30799000" type="number" name="input111" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum2_2" onchange={handleCount2}
+                                                value="30799000" type="number" name="input112" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum3_2" onchange={handleCount3}
+                                                value="30799000" type="number" name="input113" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum4_2" onchange={handleCount4}
+                                                value="15330000" type="number" name="input114" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!-- (目細))指導監督交付金 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!-- data-field-name 命名規則 :①[列数][行数] ; ②　ROW12は第1計算行として計算する -->
+
+                        <!--Row12-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <lightning-input data-field-name="countNum1_1" onchange={handleCount1}
+                                                value="6809000" type="number" name="input121" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum2_1" onchange={handleCount2}
+                                                value="6809000" type="number" name="input122" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum3_1" onchange={handleCount3}
+                                                value="6809000" type="number" name="input123" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum4_1" onchange={handleCount4}
+                                                value="3400000" type="number" name="input124" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!--Row13 空行-->
+                        <tr>
+                                <td></br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                        </tr>
+                        <!-- (項)森林整備事業費 /下からの計算行の第1行-->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row14-->
+                        <tr>
+                                <td>
+                                        (項)森林整備事業費
+                                </td>
+                                <td class="numberRightAlign ">
+                                        <p>
+                                                <lightning-formatted-number value={countNum5} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (項)森林整備事業費/下からの計算行の第11行 -->
+                        <!--Row15-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (項)森林整備事業費 /下からの計算行の第10行-->
+                        <!--Row16-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目)森林環境保全整備事業費補助/下からの計算行の第9行 -->
+                        <!--Row17-->
+                        <tr>
+                                <td>
+                                        <span>&nbsp;&nbsp;&NonBreakingSpace;&NonBreakingSpace;</span> (目)森林環境保全整備事業費補助
+                                </td>
+                                <td class="numberRightAlign ">
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目)森林環境保全整備事業費補助 /下からの計算行の第8行-->
+                        <!--Row18-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_8} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目)森林環境保全整備事業費補助/下からの計算行の第7行 -->
+                        <!--Row19-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_7} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_7} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_7} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_7}  format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細)林業専用道整備事業費補助/下からの計算行の第6行-->
+                        <!--Row20-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(目細)林業専用道整備事業費補助</td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_6} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細)林業専用道整備事業費補助 /下からの計算行の第５行-->
+                        <!--Row21-->
+       
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_5} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_5} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_5} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_5} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細)林業専用道整備事業費補助 /下からの計算行の第4行-->
+                        <!--Row22-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_4} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_4} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_4} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_4} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細々))林業専用道整備事業 /下からの計算行の第3行-->
+                        <!--Row23-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(目細々)林業専用道整備事業 </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum5_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum6_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum7_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum8_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細々))林業専用道整備事業/下からの計算行の第2行 -->
+                        <!--Row24-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <lightning-input data-field-name="countNum5_2" onchange={handleCount5} value="50140000" type="number" name="input81"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum6_2" onchange={handleCount6} value="3784000" type="number" name="input82"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum7_2" onchange={handleCount7} value="3784000" type="number" name="input83"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum8_2" onchange={handleCount8} value="1892000" type="number" name="input84"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!-- (目細々))林業専用道整備事業/下からの計算行の第1行 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row25-->
+                        <tr>
+                                <td></td>
+                                <td>
+                                        <lightning-input data-field-name="countNum5_1" onchange={handleCount5} value="60648000" type="number" name="input91"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum6_1" onchange={handleCount6} value="1201000" type="number" name="input92"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td> 
+                                <td>
+                                        <lightning-input data-field-name="countNum7_1" onchange={handleCount7} value="1201000" type="number" name="input93"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum8_1" onchange={handleCount8} value="600500" type="number" name="input94"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!--Row26 空行-->
+                        <tr>
+                                <td></br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                        </tr>
+                        <!--Row27 繰越分-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>(繰越分)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                        </tr>
+                        <!-- (項)地域再生推進費 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row28-->
+                        <tr>
+                                <td>
+                                        (項)地域再生推進費
+                                </td>
+                                <td class="numberRightAlign ">
+                                        <p>
+                                                <lightning-formatted-number value={countNum9} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum10} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum11} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum12} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目)地域再生基盤強化交付金 -->
+                        <!--Row29-->
+                        <tr>
+                                <td>
+                                        <span>&nbsp;&nbsp;&NonBreakingSpace;&NonBreakingSpace;</span> (目)地域再生基盤強化交付金
+                                </td>
+                                <td class="numberRightAlign ">
+                                        <p>
+                                                <lightning-formatted-number value={countNum9_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum10_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum11_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum12_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細)道整備交付金 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row30-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(目細)道整備交付金</td>
+                                <td>
+                                        <lightning-input data-field-name="countNum9_2" onchange={handleCount9} value="388128000" type="number" name="input301"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum10_2" onchange={handleCount10} value="0" type="number" name="input302" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum11_2" onchange={handleCount11} value="0" type="number" name="input303" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum12_2" onchange={handleCount12} value="0" type="number" name="input304" variant='label-hidden'
+                                                label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!-- (目細)指導監督交付金 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row31-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(目細)指導監督交付金</td>
+                                <td>
+                                        <lightning-input data-field-name="countNum9_1" onchange={handleCount9} value="4566000" type="number" name="input311"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum10_1" onchange={handleCount10} value="4566000" type="number" name="input312"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum11_1" onchange={handleCount11} value="4566000" type="number" name="input313"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum12_1" onchange={handleCount12} value="2288000" type="number" name="input314"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!--Row32 空行-->
+                        <tr>
+                                <td></br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                        </tr>
+                        <!-- (項)森林整備事業費 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row33-->
+                        <tr>
+                                <td>
+                                        (項)森林整備事業費
+                                </td>
+                                <td class="numberRightAlign ">
+                                        <p>
+                                                <lightning-formatted-number value={countNum13} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum14} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum15} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum16} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目)森林環境保全整備事業費補助 -->
+                        <!--Row34-->
+                        <tr>
+                                <td>
+                                        <span>&nbsp;&nbsp;&NonBreakingSpace;&NonBreakingSpace;</span> (目)森林環境保全整備事業費補助
+                                </td>
+                                <td class="numberRightAlign ">
+                                        <p>
+                                                <lightning-formatted-number value={countNum13_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum14_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum15_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum16_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細)林業専用道整備事業費補助 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row35-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(目細)林業専用道整備事業費補助</td>
+                                <td class="numberRightAlign ">
+                                        <p>
+                                                <lightning-formatted-number value={countNum13_2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum14_2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum15_2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum16_2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                        <!-- (目細々)林業専用道整備事業 -->
+                        <!-- inputXX 命名規則 XX:[行数][列数]-->
+                        <!--Row36-->
+                        <tr>
+                                <td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(目細々)林業専用道整備事業 </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum13_1" onchange={handleCount13} value="36860000" type="number" name="input311"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum14_1" onchange={handleCount14} value="434000" type="number" name="input312"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum15_1" onchange={handleCount15} value="434000" type="number" name="input313"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                                <td>
+                                        <lightning-input data-field-name="countNum16_1" onchange={handleCount16} value="218000" type="number" name="input314"
+                                                variant='label-hidden' label="Enter a decimal value"></lightning-input>
+                                </td>
+                        </tr>
+                        <!--Row37 空行-->
+                        <tr>
+                                <td></br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                        </tr>
+                        <!--合計 -->
+                        <!--Row38 -->
+                        <tr class="sumColor">
+                                <td class="theadAligncenter">
+                                        合&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;計
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum17_1} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                        <p>
+                                                <lightning-formatted-number value={countNum17_2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                        <p>
+                                                <lightning-formatted-number value={countNum17_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum18_1} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                        <p>
+                                                <lightning-formatted-number value={countNum18_2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                        <p>
+                                                <lightning-formatted-number value={countNum18_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum19_1} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                        <p>
+                                                <lightning-formatted-number value={countNum19_2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                        <p>
+                                                <lightning-formatted-number value={countNum19_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p>
+                                                <lightning-formatted-number value={countNum20_1} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                        <p>
+                                                <lightning-formatted-number value={countNum20_2} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                        <p>
+                                                <lightning-formatted-number value={countNum20_3} format-style="decimal">
+                                                </lightning-formatted-number>
+                                        </p>
+                                </td>
+                        </tr>
+                </tbody>
+        </table>
+</div>
+</template>

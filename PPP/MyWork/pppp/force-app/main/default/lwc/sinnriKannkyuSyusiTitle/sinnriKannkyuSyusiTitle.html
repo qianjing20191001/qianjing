@@ -1,0 +1,18 @@
+<template>
+        <div class="headnav">
+                <lightning-combobox class="wdcombo" variant='label-hidden' onchange={handleNeDoChange} value={neDo}
+                        placeholder="選択してください.." options={NeDoOptions}>
+                </lightning-combobox>
+
+                <lightning-input class="wdinput" type="number" name="inputNedo" variant='label-hidden'
+                        label="Enter Some number"></lightning-input>
+                <div>年度 森林環境保全整備事業収支精算書</div>
+        </div>
+
+        
+        <div>
+                <!-- (1)収入 -->
+                <c-sinnrinn-kannkyo-syuunyuu-seisann-n></c-sinnrinn-kannkyo-syuunyuu-seisann-n>
+        </div>
+       
+</template>

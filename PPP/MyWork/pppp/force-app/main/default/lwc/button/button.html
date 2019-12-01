@@ -1,0 +1,98 @@
+<template>
+    <div class="slds-theme_default">
+        <center>
+            <p><b>農林水産局へようこそ</b></p><br /><br />
+            <lightning-button label="Show Modal" variant="brand" onclick={openmodal}></lightning-button>
+        </center>
+
+        <template if:true={openmodel}>
+            <div class="demo-only">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                    aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                title="Close" onclick={closeModal}>
+                                <lightning-icon icon-name="utility:close" size="medium">
+                                </lightning-icon>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">森林環境保全整備事業
+                                実績報告・精算請求</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1"
+                            style="width: 100%;height:60%">
+
+                            <lightning-combobox name="progress" label="Status" value={value}
+                                placeholder="Select Progress" options={options} onchange={handleChange}>
+                            </lightning-combobox>
+
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <lightning-button label="キャンセル" variant="neutral" onclick={closeModal}></lightning-button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <lightning-button label="プレビュー" variant="brand" onclick={previewMethod}></lightning-button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </template>
+        <template if:true={norinmodel}>
+            <div class="demo-only">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                    aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                title="Close" onclick={closeModal}>
+                                <lightning-icon icon-name="utility:close" size="medium">
+                                </lightning-icon>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">森林環境保全整備事業
+                                実績報告・精算請求</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2"
+                            style="width: 100%;height:100%">
+                            <div class="slds-scrollable_x slds-scrollable_y" style="max-height: 550% ;max-width: 300%;">
+                            <c-page-first2></c-page-first2>
+                                </div>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <lightning-button label="確認" variant="neutral" onclick={closeModal}></lightning-button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </template>
+        <template if:true={sirinmodel}>
+            <div class="demo-only">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                    aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                title="Close" onclick={closeModal}>
+                                <lightning-icon icon-name="utility:close" size="medium">
+                                </lightning-icon>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-03" class="slds-text-heading_medium slds-hyphenate">森林環境保全整備事業
+                                実績報告・精算請求</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3"
+                            style="width: 100%;">
+                            <c-nitukini></c-nitukini>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <lightning-button label="確認" variant="neutral" onclick={closeModal}></lightning-button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </template>
+    </div>
+</template>

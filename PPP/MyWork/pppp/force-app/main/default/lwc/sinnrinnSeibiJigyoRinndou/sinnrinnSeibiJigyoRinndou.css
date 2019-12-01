@@ -1,0 +1,39 @@
+table{
+    background-color: white;
+}
+.rinndou{
+    float: left;
+    flex-direction:row;
+    font-size: 20px;
+}
+.tanni{
+    float: right;
+    flex-direction:row;
+    font-size: 20px;
+}
+.theadAligncenter{
+    text-align:center; /*設置水平居中*/
+}
+/* .numberRightAlign, .numberRightAlign input{
+    text-align: right;
+   
+} */
+
+.wdinput{
+    width: 10px; 
+}
+.headnav{
+    text-align: center;
+    font-size: 20px;
+}
+.headColor{
+    background: rgb(248,203,173);
+}
+.sumColor{
+    background: rgb(255,153,255);
+}
+p{
+    height: 32px;
+    text-align: right;
+    padding-top: 5px;
+}

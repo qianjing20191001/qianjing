@@ -1,0 +1,66 @@
+table {
+    background-color: white;
+  }
+  th {
+    text-align: center; /*設置水平居中*/
+  }
+  td {
+    text-align: center; /*設置水平居中*/
+  }
+  .shunyuu {
+    float: left;
+  }
+  .tanni {
+    float: right;
+  }
+  
+  .height32 {
+    height: 32px;
+  }
+
+  .yosannwidth{
+    width: 110px;
+}
+.jiwidth{
+  width: 95px;
+}
+  .bikostyle {
+    overflow: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 8px;
+    width: 100%;
+    border-bottom-style: none;
+    border-left-style: hidden;
+    resize: none;
+    height: 96px;
+    max-height: 96px;
+  }
+  
+  p{
+      text-align: right;
+      height: 32px;
+      padding-top: 5px;
+  
+  }
+  .width12Percent{
+    width:12%;
+  }
+
+  .headColor{
+    background: rgb(248,203,173);
+  }
+  .sumColor{
+    background: rgb(255,153,255);
+  }
+  .sannkakuSuziRight{
+    flex-grow:1;
+    text-align:right;
+  }
+  .sannkakuMargin{
+    margin-left:0%
+  }
+
+  .buttonright{
+      float: right;
+  }

@@ -1,0 +1,66 @@
+table{
+    background-color: white;
+    border-collapse: collapse;
+    width: 150%;
+}
+th{
+    text-align:center; 
+}
+td{
+    text-align:center;
+}
+h1{
+    text-align: left;
+    font-size: 20px;
+}
+input{
+    text-align:center;
+    border: 0;
+    width: 100%;
+}
+.vertical{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-align:center;
+}
+.bottom{
+    text-align: center;
+    vertical-align: bottom;
+}
+.top{
+    text-align: center;
+    vertical-align: top;
+}
+.left{
+    text-align:left;
+    float: left;
+}
+.right{
+    text-align:right;
+}
+
+.huanhang{
+    display: flex;
+    justify-content: flex-end;
+}
+.height-position{
+    vertical-align: middle;
+}
+.unit{
+    text-align: right;
+}
+.hosoku{
+    float: left;
+    flex-direction:row;
+    font-size: 15px;
+}
+.b-a{
+    text-align: center;
+}
+.fontSize1{
+    font-size: 15px;
+}
+.fontSize2{
+    font-size: 6px;
+    width:7%;
+}

@@ -1,0 +1,59 @@
+<template>
+    <div>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+      aria-describedby="modal-content-id-1">
+      <div>
+        <header>
+          <h2 style=" text-align:center;font-size:18px">
+            ＿＿県 ＿＿＿年度 森林環境保全整備事業成績書
+          </h2>
+          <p >
+            <slot name="tagline" onslotchange={handeSlotTaglineChange}></slot>
+          </p>
+        </header>
+
+    <div id="modal-content-id-1"
+          style="height:100vh; overflow: auto;">
+          <slot>
+            <div class="slds-p-vertical_small">
+              <div>
+    <lightning-tabset variant="scoped" active-tab-value={activeTab}>
+        <lightning-tab label="表紙" onactive={handleActive} value="tab1">
+            <div>
+           <div>
+            <div>
+            One Content !
+            </div>
+           </div>
+         </div>
+        </lightning-tab>
+        <lightning-tab label="森林環境保全整備事業成績書" title="2nd tab extended title">
+            Two Content !
+        </lightning-tab>
+        <lightning-tab label="森林環境保全整備事業補助金調書">
+            Three Content !
+        </lightning-tab>
+        <lightning-tab label="林野庁所管公共事業指導監督費総括表">
+            Three Content !
+        </lightning-tab>
+        <lightning-tab label="指導監督費項目別内訳表">
+            Three Content !
+        </lightning-tab>
+        <lightning-tab label="指導監督費内訳調書">
+            Three Content !
+        </lightning-tab>
+       <lightning-tab label="指導監督費清算書">
+            Three Content !
+        </lightning-tab>
+        <lightning-tab label="清算査定書">
+            Three Content !
+        </lightning-tab>
+    </lightning-tabset>
+    </div>
+</div>
+</slot>
+</div>
+      </div>
+</section>
+</div>
+</template>
